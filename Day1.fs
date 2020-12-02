@@ -19,18 +19,18 @@ let tuplesPerm1 input =
     | el1 :: input -> (loop2 el1 input [])
 
 // second try, tuple permutation with one generic loop and two recursive functions
-let tuplesPerm2 input =
-    let loopi f (el1:int) (inLi:int list) (accLi:'a list) : 'a list =
-        match inLi with
-        | [] -> accLi
-        | el2 :: inLi2 -> f el1 inLi accLi el2 inLi2
-        
-    let rec loopi1 = loopi (fun el1 _ accLi el2 inLi2 -> loopi1 el1 inLi2 ((el1, el2) :: accLi))
-    let rec loopi2 = loopi (fun el1 inLi accLi el2 inLi2 -> loopi2 el2 inLi2 ((loopi1 el1 inLi []) :: accLi))
-        
-    match input with
-    | [] -> []
-    | el1 :: input -> (loopi2 el1 input [])
+//let tuplesPerm2 input =
+//    let loopi f (el1:int) (inLi:int list) (accLi:'a list) : 'a list =
+//        match inLi with
+//        | [] -> accLi
+//        | el2 :: inLi2 -> f el1 inLi accLi el2 inLi2
+//        
+//    let rec loopi1 = loopi (fun el1 _ accLi el2 inLi2 -> loopi1 el1 inLi2 ((el1, el2) :: accLi))
+//    let rec loopi2 = loopi (fun el1 inLi accLi el2 inLi2 -> loopi2 el2 inLi2 ((loopi1 el1 inLi []) :: accLi))
+//        
+//    match input with
+//    | [] -> []
+//    | el1 :: input -> (loopi2 el1 input [])
 
 // third try, tuple permutation with recursive function and map for inner loop
 let tuplesPerm3 (input:int list) : (int*int) seq =
