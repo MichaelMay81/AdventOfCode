@@ -8,22 +8,26 @@ let puzzle1 (input: string[]) =
     
     input
     |> Seq.mapi (fun i str -> (i*stepsRight%numOfColumns, str))
-    |> Seq.map (fun (i, str) -> getNth i str)
+    |> Seq.map (fun (i, str) -> String.getNth i str)
     |> outputAndRemoveErrors
     |> Seq.filter ((=) '#')
     |> Seq.length
     
-let puzzle (input: string[]) (stepsRight:int) (stepsDown:int) =
-    let numOfColumns = input.[0].Length
+let puzzle (input: string[]) (stepsRight:int) (stepsDown:int) : int =    
+    let calc numOfColumns =
+        input
+        |> Seq.mapi (fun i str -> if i % stepsDown = 0 then Some str else None)
+        |> Seq.choose id
+        |> Seq.mapi (fun i str -> String.getNth (i*stepsRight%numOfColumns) str)
+        |> outputAndRemoveErrors
+        |> Seq.filter ((=) '#')
+        |> Seq.length
     
     input
-    |> Seq.mapi (fun i str -> ((i % stepsDown) = 0 , str))
-    |> Seq.filter fst
-    |> Seq.mapi (fun i (_, str) -> (i*stepsRight%numOfColumns, str))
-    |> Seq.map (fun (i, str) -> getNth i str)
-    |> outputAndRemoveErrors
-    |> Seq.filter ((=) '#')
-    |> Seq.length
+    |> Array.getNth 0 // get number of columns
+    |> function
+       | Ok str -> calc str.Length
+       | Error str -> outputErrorAndDefault -1 (Error str)
     
 let puzzle2 (input: string[]) =
     puzzle input 1 1 *
