@@ -13,26 +13,6 @@ let readLines filePath : Result<string seq, string> =
     with
     | :? FileNotFoundException -> Error ("Couldn't load file " + filePath)
 
-type List<'a> with
-    static member getNth (i:int) (l:'a list): Result<'a, string> =
-        let rec loop c cl =
-            match c, cl with
-            | 0, e :: _ -> Ok e
-            | _, [] -> Error (sprintf "no %ith element in %A" i l)
-            | _, _ :: rest -> loop (c-1) rest
-        loop i l
-
-module String =
-    /// Beware, this is not very efficient (converts to List)
-    let getNth (i:int) (s:string) =
-        s |> Seq.toList |> List.getNth i
-
-module Array =
-    /// Beware, this is not very efficient (converts to List)
-    let getNth (i:int) (a: 'T []) =
-        a |> Array.toList |> List.getNth i
-
-
 // ---- Error Handling ----
 let outputError (input: Result<'a, string>) : unit =
     match input with

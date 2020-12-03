@@ -43,6 +43,6 @@ let main argv =
     printfn "day3-1 Final:  %A" (getPuzzleInput "Inputs/Day3.txt" |> Seq.toArray |> Day3.puzzle1)
     
     printfn "day3-2 Test:  %A" (Day3.puzzle2 input)
-    printfn "day3-2 Final:  %A" (getPuzzleInput "Inputs/Day3.txt" |> Seq.toArray |> Day3.puzzle2)
+    printfn "day3-2 Final:  %A" (readLines "Inputs/Day3.txt" |> Result.map ( Seq.toArray >> Day3.puzzle2))
 
     0 // return an integer exit code
