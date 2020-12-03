@@ -1,17 +1,6 @@
 module AoC_Mike.Helpers
 
 open System.IO
-open FSharpPlus.Control
-
-let filter (input: Result<'a, string> seq) : 'a seq =
-    let errors = input
-                 |> Seq.mapi (fun i e -> i, e)
-                 |> Seq.choose (function (i, Error e) -> Some (i, e) | _ -> None)
-                 
-    for i, e in errors do
-        printfn "Error (%i): %s" (i+1) e
-        
-    input |> Seq.choose (function Ok v -> Some v | _ -> None)
 
 let tee deadEndFunction oneTrackInput =
     deadEndFunction oneTrackInput
