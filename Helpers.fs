@@ -23,6 +23,14 @@ let readLines filePath : Result<string seq, string> =
     with
     | :? FileNotFoundException -> Error ("Couldn't load file " + filePath)
 
+let getNth (i:int) (s:string) =
+    let rec loop c cl =
+        match c, cl with
+        | 0, e :: _ -> Ok e
+        | _, [] -> Error ("no " + (string i) + "th element in '" + s + "'")
+        | _, _ :: rest -> loop (c-1) rest
+    loop i (s |> Seq.toList)
+
 // ---- Error Handling ----
 let outputError (input: Result<'a, string>) : unit =
     match input with
