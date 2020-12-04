@@ -91,10 +91,11 @@ let parseHairColor str : Result<string, string> =
     |> String.tryHead
     |> Option.bind ((=) '#' >> function true -> Some '#' | false -> None)
     |> Option.toResultWith (sprintf "%s should start with a #" str)
+    |> Result.bind (fun _ -> if (str |> String.length = 7) then Ok str else Error (sprintf "%s should only have 6 chars after #" str))
     |> Result.bind (fun _ -> 
         str
         |> String.skip 1
-        |> String.forall (fun v -> "123456789abcdef" |> String.toList |> List.contains v)
+        |> String.forall (fun v -> "0123456789abcdef" |> String.toList |> List.contains v)
         |> function
             | true -> Ok str
             | false -> Error (sprintf "%s is not a hex value" str))
@@ -117,7 +118,6 @@ let parsePassportId str : Result<string, string> =
         Error (sprintf "'%s' is not a number" str )
     else Ok str
          
-
 let parseFieldTuple = function
     | "byr", v -> v |> parseYear 1920 2002 |> Result.map BirthYear
     | "iyr", v -> v |> parseYear 2010 2020 |> Result.map IssueYear

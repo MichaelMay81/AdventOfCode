@@ -13,12 +13,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6c6a4c35-d00c-4c83-a840-e92a283c4033" name="Default Changelist" comment="Day4 Puzzle1">
-      <change afterPath="$PROJECT_DIR$/Day4-2.fs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.AoC-Mike/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AoC-Mike/.idea/contentModel.xml" afterDir="false" />
+    <list default="true" id="6c6a4c35-d00c-4c83-a840-e92a283c4033" name="Default Changelist" comment="Day4 Puzzle2 but it gives to low a number :(">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.AoC-Mike/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AoC-Mike/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AoC-Mike.fsproj" beforeDir="false" afterPath="$PROJECT_DIR$/AoC-Mike.fsproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Day4.fs" beforeDir="false" afterPath="$PROJECT_DIR$/Day4.fs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Day4-2.fs" beforeDir="false" afterPath="$PROJECT_DIR$/Day4-2.fs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Program.fs" beforeDir="false" afterPath="$PROJECT_DIR$/Program.fs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -55,8 +52,8 @@
         <option value="$PROJECT_DIR$/Helpers.fs" />
         <option value="$PROJECT_DIR$/Day3.fs" />
         <option value="$PROJECT_DIR$/Inputs/Day4.txt" />
-        <option value="$PROJECT_DIR$/Day4.fs" />
         <option value="$PROJECT_DIR$/Program.fs" />
+        <option value="$PROJECT_DIR$/Day4.fs" />
         <option value="$PROJECT_DIR$/Day4-2.fs" />
       </list>
     </option>
@@ -112,7 +109,7 @@
       <workItem from="1606799640697" duration="1503000" />
       <workItem from="1606806619139" duration="12691000" />
       <workItem from="1606825970823" duration="14012000" />
-      <workItem from="1606847669111" duration="64528000" />
+      <workItem from="1606847669111" duration="68240000" />
     </task>
     <task id="LOCAL-00001" summary="Day1">
       <created>1606847743536</created>
@@ -163,7 +160,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607087286573</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Day4 Puzzle2 but it gives to low a number :(">
+      <created>1607094547058</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1607094547058</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -189,7 +193,8 @@
     <MESSAGE value="some cleanup" />
     <MESSAGE value="Switch own getNth to tryHead and tryItem," />
     <MESSAGE value="Day4 Puzzle1" />
-    <option name="LAST_COMMIT_MESSAGE" value="Day4 Puzzle1" />
+    <MESSAGE value="Day4 Puzzle2 but it gives to low a number :(" />
+    <option name="LAST_COMMIT_MESSAGE" value="Day4 Puzzle2 but it gives to low a number :(" />
   </component>
   <component name="WindowStateProjectService">
     <state width="463" height="525" key="DebuggerActiveHint" timestamp="1607011747282">
@@ -200,22 +205,22 @@
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2663" y="298" width="424" height="491" key="FileChooserDialogImpl/0.27.1920.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1606899033237" />
-    <state width="1874" height="225" key="GridCell.Tab.0.bottom" timestamp="1607094493913">
+    <state width="1874" height="409" key="GridCell.Tab.0.bottom" timestamp="1607115495396">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state width="1874" height="225" key="GridCell.Tab.0.bottom/0.27.1920.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1607094493913" />
-    <state width="1874" height="225" key="GridCell.Tab.0.center" timestamp="1607094493913">
+    <state width="1874" height="409" key="GridCell.Tab.0.bottom/0.27.1920.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1607115495396" />
+    <state width="1874" height="409" key="GridCell.Tab.0.center" timestamp="1607115495396">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state width="1874" height="225" key="GridCell.Tab.0.center/0.27.1920.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1607094493913" />
-    <state width="1874" height="225" key="GridCell.Tab.0.left" timestamp="1607094493913">
+    <state width="1874" height="409" key="GridCell.Tab.0.center/0.27.1920.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1607115495396" />
+    <state width="1874" height="409" key="GridCell.Tab.0.left" timestamp="1607115495396">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state width="1874" height="225" key="GridCell.Tab.0.left/0.27.1920.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1607094493913" />
-    <state width="1874" height="225" key="GridCell.Tab.0.right" timestamp="1607094493913">
+    <state width="1874" height="409" key="GridCell.Tab.0.left/0.27.1920.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1607115495395" />
+    <state width="1874" height="409" key="GridCell.Tab.0.right" timestamp="1607115495396">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state width="1874" height="225" key="GridCell.Tab.0.right/0.27.1920.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1607094493913" />
+    <state width="1874" height="409" key="GridCell.Tab.0.right/0.27.1920.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1607115495396" />
     <state width="1874" height="378" key="GridCell.Tab.1.bottom" timestamp="1607011781087">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
@@ -284,10 +289,10 @@
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2120" y="183" width="800" height="537" key="Rider.ProjectTemplateDialog.Size/0.27.1920.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1606811494110" />
-    <state x="2475" y="276" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1607012349860">
+    <state x="2475" y="276" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1607094557794">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="2475" y="276" width="800" height="535" key="Vcs.Push.Dialog.v2/0.27.1920.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1607012349860" />
+    <state x="2475" y="276" width="800" height="535" key="Vcs.Push.Dialog.v2/0.27.1920.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1607094557794" />
     <state x="2665" y="454" width="420" height="179" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1607012321044">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
