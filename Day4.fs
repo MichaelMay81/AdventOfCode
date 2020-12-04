@@ -1,4 +1,4 @@
-module AoC_Mike.Day4
+module AoC_Mike.Day4_1
 
 open FSharpPlus
 open FSharpPlus.Data
@@ -58,7 +58,7 @@ let isValid (input: PassportFieldTypes seq) : bool =
 //    input |> Seq.contains EyeColor &&
 //    input |> Seq.contains PassportID
     
-let puzzle1 (input: string seq) =
+let puzzle (input: string seq) =
     splitIntoPassportStringLists input
     |> (Seq.map <| stringFieldListsToPassportFieldList)
     |> Seq.map isValid

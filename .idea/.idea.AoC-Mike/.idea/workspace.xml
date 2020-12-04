@@ -13,12 +13,12 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6c6a4c35-d00c-4c83-a840-e92a283c4033" name="Default Changelist" comment="Switch own getNth to tryHead and tryItem,">
-      <change afterPath="$PROJECT_DIR$/Day4.fs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Inputs/Day4.txt" afterDir="false" />
+    <list default="true" id="6c6a4c35-d00c-4c83-a840-e92a283c4033" name="Default Changelist" comment="Day4 Puzzle1">
+      <change afterPath="$PROJECT_DIR$/Day4-2.fs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.AoC-Mike/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AoC-Mike/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.AoC-Mike/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AoC-Mike/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AoC-Mike.fsproj" beforeDir="false" afterPath="$PROJECT_DIR$/AoC-Mike.fsproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Day4.fs" beforeDir="false" afterPath="$PROJECT_DIR$/Day4.fs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Program.fs" beforeDir="false" afterPath="$PROJECT_DIR$/Program.fs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -54,9 +54,10 @@
         <option value="$PROJECT_DIR$/Day2.fs" />
         <option value="$PROJECT_DIR$/Helpers.fs" />
         <option value="$PROJECT_DIR$/Day3.fs" />
-        <option value="$PROJECT_DIR$/Program.fs" />
         <option value="$PROJECT_DIR$/Inputs/Day4.txt" />
         <option value="$PROJECT_DIR$/Day4.fs" />
+        <option value="$PROJECT_DIR$/Program.fs" />
+        <option value="$PROJECT_DIR$/Day4-2.fs" />
       </list>
     </option>
   </component>
@@ -111,7 +112,7 @@
       <workItem from="1606799640697" duration="1503000" />
       <workItem from="1606806619139" duration="12691000" />
       <workItem from="1606825970823" duration="14012000" />
-      <workItem from="1606847669111" duration="57258000" />
+      <workItem from="1606847669111" duration="64528000" />
     </task>
     <task id="LOCAL-00001" summary="Day1">
       <created>1606847743536</created>
@@ -155,7 +156,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607012265706</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Day4 Puzzle1">
+      <created>1607087286573</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1607087286573</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -180,7 +188,8 @@
     <MESSAGE value="More error reports and less exceptions!!" />
     <MESSAGE value="some cleanup" />
     <MESSAGE value="Switch own getNth to tryHead and tryItem," />
-    <option name="LAST_COMMIT_MESSAGE" value="Switch own getNth to tryHead and tryItem," />
+    <MESSAGE value="Day4 Puzzle1" />
+    <option name="LAST_COMMIT_MESSAGE" value="Day4 Puzzle1" />
   </component>
   <component name="WindowStateProjectService">
     <state width="463" height="525" key="DebuggerActiveHint" timestamp="1607011747282">
@@ -191,22 +200,22 @@
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2663" y="298" width="424" height="491" key="FileChooserDialogImpl/0.27.1920.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1606899033237" />
-    <state width="1874" height="225" key="GridCell.Tab.0.bottom" timestamp="1607083301670">
+    <state width="1874" height="225" key="GridCell.Tab.0.bottom" timestamp="1607094493913">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state width="1874" height="225" key="GridCell.Tab.0.bottom/0.27.1920.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1607083301670" />
-    <state width="1874" height="225" key="GridCell.Tab.0.center" timestamp="1607083301670">
+    <state width="1874" height="225" key="GridCell.Tab.0.bottom/0.27.1920.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1607094493913" />
+    <state width="1874" height="225" key="GridCell.Tab.0.center" timestamp="1607094493913">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state width="1874" height="225" key="GridCell.Tab.0.center/0.27.1920.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1607083301670" />
-    <state width="1874" height="225" key="GridCell.Tab.0.left" timestamp="1607083301670">
+    <state width="1874" height="225" key="GridCell.Tab.0.center/0.27.1920.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1607094493913" />
+    <state width="1874" height="225" key="GridCell.Tab.0.left" timestamp="1607094493913">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state width="1874" height="225" key="GridCell.Tab.0.left/0.27.1920.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1607083301670" />
-    <state width="1874" height="225" key="GridCell.Tab.0.right" timestamp="1607083301670">
+    <state width="1874" height="225" key="GridCell.Tab.0.left/0.27.1920.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1607094493913" />
+    <state width="1874" height="225" key="GridCell.Tab.0.right" timestamp="1607094493913">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state width="1874" height="225" key="GridCell.Tab.0.right/0.27.1920.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1607083301670" />
+    <state width="1874" height="225" key="GridCell.Tab.0.right/0.27.1920.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1607094493913" />
     <state width="1874" height="378" key="GridCell.Tab.1.bottom" timestamp="1607011781087">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
@@ -283,17 +292,17 @@
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2665" y="454" width="420" height="179" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.27.1920.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1607012321044" />
-    <state x="2538" y="138" width="683" height="804" key="find.popup" timestamp="1607080665968">
+    <state x="2538" y="138" width="683" height="804" key="find.popup" timestamp="1607087505112">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="2538" y="138" width="683" height="804" key="find.popup/0.27.1920.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1607080665968" />
+    <state x="2538" y="138" width="683" height="804" key="find.popup/0.27.1920.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1607087505112" />
     <state x="2544" y="245" key="run.anything.popup" timestamp="1606984139627">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2544" y="245" key="run.anything.popup/0.27.1920.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1606984139627" />
-    <state x="2543" y="239" width="672" height="678" key="search.everywhere.popup" timestamp="1607074417761">
+    <state x="2543" y="239" width="672" height="678" key="search.everywhere.popup" timestamp="1607092525297">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="2543" y="239" width="672" height="678" key="search.everywhere.popup/0.27.1920.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1607074417761" />
+    <state x="2543" y="239" width="672" height="678" key="search.everywhere.popup/0.27.1920.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1607092525297" />
   </component>
 </project>
