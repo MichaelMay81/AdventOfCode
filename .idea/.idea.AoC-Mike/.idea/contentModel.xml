@@ -9,11 +9,13 @@
       <e p="Day1.fs" t="Include" />
       <e p="Day2.fs" t="Include" />
       <e p="Day3.fs" t="Include" />
+      <e p="Day4.fs" t="Include" />
       <e p="Helpers.fs" t="Include" />
       <e p="Inputs" t="Include">
         <e p="Day1.txt" t="Include" />
         <e p="Day2.txt" t="Include" />
         <e p="Day3.txt" t="Include" />
+        <e p="Day4.txt" t="Include" />
       </e>
       <e p="Program.fs" t="Include" />
       <e p="bin" t="ExcludeRecursive" />

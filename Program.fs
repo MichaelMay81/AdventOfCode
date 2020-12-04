@@ -25,8 +25,6 @@ let testAll () =
 //    printfn "foobar %A" (["1-3 b: cdefg" |> Day2.parse] |> filter |> Seq.map Day2.isPassCorrect2)
 //    printfn "foobar %A" (["2-9 c: ccccccccc" |> Day2.parse] |> filter |> Seq.map Day2.isPassCorrect2)
 
-[<EntryPoint>]
-let main argv =
     let input = [|"..##......."
                   "#...#...#.."
                   ".#....#..#."
@@ -44,5 +42,24 @@ let main argv =
     
     printfn "day3-2 Test:  %A" (Day3.puzzle2 input)
     printfn "day3-2 Final:  %A" (readLines "Inputs/Day3.txt" |> Result.map ( Seq.toArray >> Day3.puzzle2))
+
+[<EntryPoint>]
+let main argv =
+    let input = [|"ecl:gry pid:860033327 eyr:2020 hcl:#fffffd"
+                  "byr:1937 iyr:2017 cid:147 hgt:183cm"
+                  ""
+                  "iyr:2013 ecl:amb cid:350 eyr:2023 pid:028048884"
+                  "hcl:#cfa07d byr:1929"
+                  ""
+                  "hcl:#ae17e1 iyr:2013"
+                  "eyr:2024"
+                  "ecl:brn pid:760753108 byr:1931"
+                  "hgt:179cm"
+                  ""
+                  "hcl:#cfa07d eyr:2025 pid:166559648"
+                  "iyr:2011 ecl:brn hgt:59in"|]
+    
+    printfn "day4-1 Test:  %A" (Day4.puzzle1 input)
+    printfn "day4-2 Final:  %A" (readLines "Inputs/Day4.txt" |> Result.map Day4.puzzle1)
 
     0 // return an integer exit code
