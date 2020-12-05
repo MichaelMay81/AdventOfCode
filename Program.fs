@@ -43,8 +43,6 @@ let testAll () =
     printfn "day3-2 Test:  %A" (Day3.puzzle2 input)
     printfn "day3-2 Final:  %A" (readLines "Inputs/Day3.txt" |> Result.map ( Seq.toArray >> Day3.puzzle2))
 
-[<EntryPoint>]
-let main argv =
     let input = [|"ecl:gry pid:860033327 eyr:2020 hcl:#fffffd"
                   "byr:1937 iyr:2017 cid:147 hgt:183cm"
                   ""
@@ -96,5 +94,13 @@ let main argv =
 //                      "iyr:2010 hgt:158cm hcl:#b6652a ecl:blu byr:1944 eyr:2021 pid:093154719"]
 //    for inp in validInput do
 //        printfn "valid test %A %A" (Day4_2.puzzle [inp]) inp
+
+[<EntryPoint>]
+let main argv =
+    let input = [ "FBFBBFFRLR"; "BFFFBBFRRR"; "FFFBBBFRRR"; "BBFFBBFRLL"]
+    printfn "day5-1 Test:  %A" (input |> Seq.map Day5.puzzleStringToInt)
+    printfn "day5-1 Final:  %A" (readLines "Inputs/Day5.txt" |> Result.map Day5.puzzle1)
+    
+    printfn "day5-2 Final:  %A" (readLines "Inputs/Day5.txt" |> Result.map Day5.puzzle2)
     
     0 // return an integer exit code
