@@ -15,39 +15,44 @@ let parseRule str =
     let innerBags = innerString |> parseInnerBags |> Option.map Seq.toList
     (outerColor, innerBags)
 
-let parseBagsToMap (input:Map<string, ((int*string) list option)>) : Map<string, string list>=
+let parsedBagsToOuterMap (input: (string *((int*string) list option)) seq) : Map<string, Map<string, int> option> =
     input
-    |> Seq.map (fun (KeyValue(o, isO)) -> isO |> Option.map (Seq.map (fun (_, i) -> (i, o))))
+    |> Seq.map (fun (k1, kvso) -> (k1, kvso
+                                       |> Option.map (Seq.map (fun (v, k2) -> (k2, v)) >> Map.ofSeq)))
+    |> Map.ofSeq
+
+let parsedBagsToInnerMap (input:Map<string, Map<string,int> option>) : Map<string, string Set>=
+    input
+    |> Seq.map (fun (KeyValue(o, isO)) -> isO |> Option.map (Seq.map (fun (KeyValue(i, _)) -> (i, o))))
     |> Seq.choose id
     |> Seq.concat
     |> Seq.groupBy fst
-    |> Seq.map (fun (s, tups) -> (s, tups |> Seq.map snd |> Seq.toList))
+    |> Seq.map (fun (s, tups) -> (s, tups |> Seq.map snd |> Set.ofSeq))
     |> Map.ofSeq
 
-let deepSearchInner (innerBag:string) (innerBags:Map<string, string list>) : string list =
-    let rec loop (bags:string list) (acc:string list) =
+let deepSearchInner (innerBag:string) (innerBags:Map<string, string Set>) : string Set =
+    let rec loop (bags:string Set) (acc:string Set) =
         let newBags =
             bags
             |> Seq.map (fun key -> innerBags |> Map.tryFind key)
             |> Seq.choose id
             |> Seq.concat
-            |> Seq.distinct
-            |> Seq.filter (fun value -> acc |> Seq.contains value |> not)
-            |> Seq.toList
+            |> Set.ofSeq
+            |> (fun newBags -> acc |> Set.difference newBags)
         
-        if newBags |> List.isEmpty then
+        if newBags |> Set.isEmpty then
             acc
-        else loop newBags (acc @ newBags)
+        else loop newBags (acc + newBags)
                    
-    loop [innerBag] []
+    loop (set [innerBag]) Set.empty
     
 let puzzle1 (innerBag:string) (rules:string seq) : int =
     rules
-    // create outer bags map
     |> Seq.map parseRule
-    |> Map.ofSeq
+    // create outer bags map
+    |> parsedBagsToOuterMap
     // creat inner bags map
-    |> parseBagsToMap
+    |> parsedBagsToInnerMap
     // search all bags that can contain our bag
     |> deepSearchInner innerBag
-    |> List.length
+    |> Set.count

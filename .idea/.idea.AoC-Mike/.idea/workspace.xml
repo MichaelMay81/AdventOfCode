@@ -14,14 +14,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6c6a4c35-d00c-4c83-a840-e92a283c4033" name="Default Changelist" comment="Day4 Puzzle2 Bugfixes, now get the right answer">
-      <change afterPath="$PROJECT_DIR$/Day6.fs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Day7.fs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Inputs/Day6.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Inputs/Day7.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.AoC-Mike/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AoC-Mike/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.AoC-Mike/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AoC-Mike/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AoC-Mike.fsproj" beforeDir="false" afterPath="$PROJECT_DIR$/AoC-Mike.fsproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Program.fs" beforeDir="false" afterPath="$PROJECT_DIR$/Program.fs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Day7.fs" beforeDir="false" afterPath="$PROJECT_DIR$/Day7.fs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -110,7 +104,7 @@
       <workItem from="1606825970823" duration="14012000" />
       <workItem from="1606847669111" duration="68358000" />
       <workItem from="1607171789177" duration="6973000" />
-      <workItem from="1607326397252" duration="9493000" />
+      <workItem from="1607326397252" duration="11739000" />
     </task>
     <task id="LOCAL-00001" summary="Day1">
       <created>1606847743536</created>
@@ -182,7 +176,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607174560612</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Day7">
+      <created>1607335910382</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1607335910382</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -212,7 +213,8 @@
     <MESSAGE value="Day4 Puzzle2 but it gives to low a number :(" />
     <MESSAGE value="Day4 Puzzle2 Bugfixes, now get the right answer" />
     <MESSAGE value="Day5" />
-    <option name="LAST_COMMIT_MESSAGE" value="Day5" />
+    <MESSAGE value="Day7" />
+    <option name="LAST_COMMIT_MESSAGE" value="Day7" />
   </component>
   <component name="WindowStateProjectService">
     <state width="463" height="525" key="DebuggerActiveHint" timestamp="1607334006293">
@@ -223,22 +225,22 @@
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2663" y="298" width="424" height="491" key="FileChooserDialogImpl/0.27.1920.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1606899033237" />
-    <state width="1874" height="262" key="GridCell.Tab.0.bottom" timestamp="1607334852202">
+    <state width="1874" height="262" key="GridCell.Tab.0.bottom" timestamp="1607336663401">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state width="1874" height="262" key="GridCell.Tab.0.bottom/0.27.1920.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1607334852202" />
-    <state width="1874" height="262" key="GridCell.Tab.0.center" timestamp="1607334852202">
+    <state width="1874" height="262" key="GridCell.Tab.0.bottom/0.27.1920.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1607336663401" />
+    <state width="1874" height="262" key="GridCell.Tab.0.center" timestamp="1607336663401">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state width="1874" height="262" key="GridCell.Tab.0.center/0.27.1920.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1607334852202" />
-    <state width="1874" height="262" key="GridCell.Tab.0.left" timestamp="1607334852202">
+    <state width="1874" height="262" key="GridCell.Tab.0.center/0.27.1920.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1607336663401" />
+    <state width="1874" height="262" key="GridCell.Tab.0.left" timestamp="1607336663401">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state width="1874" height="262" key="GridCell.Tab.0.left/0.27.1920.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1607334852202" />
-    <state width="1874" height="262" key="GridCell.Tab.0.right" timestamp="1607334852202">
+    <state width="1874" height="262" key="GridCell.Tab.0.left/0.27.1920.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1607336663401" />
+    <state width="1874" height="262" key="GridCell.Tab.0.right" timestamp="1607336663401">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state width="1874" height="262" key="GridCell.Tab.0.right/0.27.1920.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1607334852202" />
+    <state width="1874" height="262" key="GridCell.Tab.0.right/0.27.1920.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1607336663401" />
     <state width="1874" height="378" key="GridCell.Tab.1.bottom" timestamp="1607334038296">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
