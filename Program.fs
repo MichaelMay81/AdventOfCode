@@ -95,12 +95,35 @@ let testAll () =
 //    for inp in validInput do
 //        printfn "valid test %A %A" (Day4_2.puzzle [inp]) inp
 
-[<EntryPoint>]
-let main argv =
     let input = [ "FBFBBFFRLR"; "BFFFBBFRRR"; "FFFBBBFRRR"; "BBFFBBFRLL"]
     printfn "day5-1 Test:  %A" (input |> Seq.map Day5.puzzleStringToInt)
     printfn "day5-1 Final:  %A" (readLines "Inputs/Day5.txt" |> Result.map Day5.puzzle1)
     
     printfn "day5-2 Final:  %A" (readLines "Inputs/Day5.txt" |> Result.map Day5.puzzle2)
+    
+    let input1 = ["abcx"; "abcy"; "abcz"]
+    let input2 = ["abc"; ""; "a"; "b"; "c"; ""; "ab"; "ac"; ""; "a"; "a"; "a"; "a"; ""; "b"]
+//    printfn "day6-1 Test1:  %A" (input1 |> Day6.puzzle1)
+//    printfn "day6-1 Test2:  %A" (input2 |> Day6.puzzle1)
+//    printfn "day6-1 Final:  %A" (readLines "Inputs/Day6.txt" |> Result.map Day6.puzzle1)
+    
+    printfn "day6-2 Test1:  %A" (input1 |> Day6.puzzle2)
+    printfn "day6-2 Test2:  %A" (input2 |> Day6.puzzle2)
+    printfn "day6-2 Final:  %A" (readLines "Inputs/Day6.txt" |> Result.map Day6.puzzle2)
+    
+[<EntryPoint>]
+let main argv =
+    let input = ["light red bags contain 1 bright white bag, 2 muted yellow bags."
+                 "dark orange bags contain 3 bright white bags, 4 muted yellow bags."
+                 "bright white bags contain 1 shiny gold bag."
+                 "muted yellow bags contain 2 shiny gold bags, 9 faded blue bags."
+                 "shiny gold bags contain 1 dark olive bag, 2 vibrant plum bags."
+                 "dark olive bags contain 3 faded blue bags, 4 dotted black bags."
+                 "vibrant plum bags contain 5 faded blue bags, 6 dotted black bags."
+                 "faded blue bags contain no other bags."
+                 "dotted black bags contain no other bags."]
+
+    printfn "day7-1 Test:  %A" (input |> (Day7.puzzle1 "shiny gold"))
+    printfn "day7-1 Final:  %A" (readLines "Inputs/Day7.txt" |> Result.map (Day7.puzzle1 "shiny gold"))
     
     0 // return an integer exit code
