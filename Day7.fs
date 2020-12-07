@@ -46,6 +46,35 @@ let deepSearchInner (innerBag:string) (innerBags:Map<string, string Set>) : stri
                    
     loop (set [innerBag]) Set.empty
     
+let mergeBagMaps =
+    Seq.concat
+    >> Seq.groupBy (fun (KeyValue(k, v)) -> k)
+    >> Seq.map (fun (key, values) -> (key, values
+                                           |> Seq.map (fun (KeyValue(_, values)) -> values)
+                                           |> (Seq.fold (+) 0)))
+    >> Map.ofSeq
+    
+let deepSearchOuter (outerBag:string) (outerBags:Map<string, Map<string, int>>) : Map<string, int> =
+    let rec loop (bags:Map<string,int>) (acc:Map<string, int>) =
+        let newBags =
+            bags
+            // get next bags
+            |> Map.map (fun key mul -> mul, outerBags |> Map.tryFind key)
+            // mulitply number of bags needed with count from outer bag
+            |> Map.map (fun _ (mul, maps) -> maps |> Option.map (Map.map (fun _ v2 -> mul * v2 )))
+            |> Map.chooseValues id
+            |> Map.toSeq
+            // drop outer bag names
+            |> Seq.map snd
+            // merge inner bags
+            |> mergeBagMaps
+        
+        if newBags |> Map.isEmpty then
+            acc
+        else loop newBags (mergeBagMaps [acc; newBags])
+                   
+    loop (Map [(outerBag, 1)]) Map.empty
+    
 let puzzle1 (innerBag:string) (rules:string seq) : int =
     rules
     |> Seq.map parseRule
@@ -56,3 +85,14 @@ let puzzle1 (innerBag:string) (rules:string seq) : int =
     // search all bags that can contain our bag
     |> deepSearchInner innerBag
     |> Set.count
+    
+let puzzle2 (innerBag:string) (rules:string seq) : int =
+    rules
+    |> Seq.map parseRule
+    // create outer bags map
+    |> parsedBagsToOuterMap
+    |> Map.chooseValues id
+    // search all bags that can contain our bag
+    |> deepSearchOuter innerBag
+    //|> Map.map (fun k v -> printfn "%A: %A" k v; v)
+    |> Map.fold (fun s _ i -> s + i) 0
