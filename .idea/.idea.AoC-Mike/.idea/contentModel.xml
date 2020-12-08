@@ -17,6 +17,7 @@
       <e p="Day5.fs" t="Include" />
       <e p="Day6.fs" t="Include" />
       <e p="Day7.fs" t="Include" />
+      <e p="Day8.fs" t="Include" />
       <e p="Helpers.fs" t="Include" />
       <e p="Inputs" t="Include">
         <e p="Day1.txt" t="Include" />
@@ -26,6 +27,7 @@
         <e p="Day5.txt" t="Include" />
         <e p="Day6.txt" t="Include" />
         <e p="Day7.txt" t="Include" />
+        <e p="Day8.txt" t="Include" />
       </e>
       <e p="Program.fs" t="Include" />
       <e p="TestProject" t="IncludeRecursive">

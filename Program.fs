@@ -111,8 +111,6 @@ let testAll () =
     printfn "day6-2 Test2:  %A" (input2 |> Day6.puzzle2)
     printfn "day6-2 Final:  %A" (readLines "Inputs/Day6.txt" |> Result.map Day6.puzzle2)
     
-[<EntryPoint>]
-let main argv =
     let input1 = ["light red bags contain 1 bright white bag, 2 muted yellow bags."
                   "dark orange bags contain 3 bright white bags, 4 muted yellow bags."
                   "bright white bags contain 1 shiny gold bag."
@@ -137,5 +135,11 @@ let main argv =
     printfn "day7-2 Test1:  %A" (input1 |> (Day7.puzzle2 "shiny gold"))
     printfn "day7-2 Test2:  %A" (input2 |> (Day7.puzzle2 "shiny gold"))
     printfn "day7-2 Final:  %A" (readLines "Inputs/Day7.txt" |> Result.map (Day7.puzzle2 "shiny gold"))
+    
+[<EntryPoint>]
+let main argv =
+    let input = ["nop +0"; "acc +1"; "jmp +4"; "acc +3"; "jmp -3"; "acc -99"; "acc +1"; "jmp -4"; "acc +6"] 
+    printfn "day8-1 Test:  %A" (input |> Day8.puzzle1)
+    printfn "day8-1 Final:  %A" (readLines "Inputs/Day8.txt" |> Result.map Day8.puzzle1)
     
     0 // return an integer exit code
