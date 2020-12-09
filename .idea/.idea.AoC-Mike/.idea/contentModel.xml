@@ -32,8 +32,8 @@
       <e p="Program.fs" t="Include" />
       <e p="TestProject" t="IncludeRecursive">
         <e p="Program.fs" t="Include" />
-        <e p="Test-Day7-unquote.fs" t="Include" />
-        <e p="Test-Day7-xunit.fs" t="Include" />
+        <e p="Test-Day7.fs" t="Include" />
+        <e p="Test-Day8.fs" t="Include" />
         <e p="TestProject.fsproj" t="IncludeRecursive" />
         <e p="bin" t="ExcludeRecursive" />
         <e p="obj" t="ExcludeRecursive" />

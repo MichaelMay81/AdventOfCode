@@ -17,12 +17,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6c6a4c35-d00c-4c83-a840-e92a283c4033" name="Default Changelist" comment="Day4 Puzzle2 Bugfixes, now get the right answer">
-      <change afterPath="$PROJECT_DIR$/Day8.fs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Inputs/Day8.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TestProject/Test-Day8.fs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.AoC-Mike/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AoC-Mike/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.AoC-Mike/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AoC-Mike/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AoC-Mike.fsproj" beforeDir="false" afterPath="$PROJECT_DIR$/AoC-Mike.fsproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Program.fs" beforeDir="false" afterPath="$PROJECT_DIR$/Program.fs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestProject/Test-Day7-unquote.fs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestProject/Test-Day7-xunit.fs" beforeDir="false" afterPath="$PROJECT_DIR$/TestProject/Test-Day7.fs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestProject/TestProject.fsproj" beforeDir="false" afterPath="$PROJECT_DIR$/TestProject/TestProject.fsproj" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,8 +34,8 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/TestProject/Test-Day7-xunit.fs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/TestProject/Test-Day7-unquote.fs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/TestProject/Test-Day7.fs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Day8-2.fs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/TestProject/Program.fs" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock:///home/users/may/Documents/WebVis/AdventOfCode/MIkE/Program.fs" root0="SKIP_HIGHLIGHTING" />
   </component>
@@ -62,11 +63,12 @@
         <option value="$PROJECT_DIR$/TestProject/Tests.fs" />
         <option value="$PROJECT_DIR$/TestProject/Program.fs" />
         <option value="$PROJECT_DIR$/TestProject/Test-Day7-xunit.fs" />
-        <option value="$PROJECT_DIR$/TestProject/Test-Day7-unquote.fs" />
         <option value="$PROJECT_DIR$/.idea/.idea.AoC-Mike/.idea/workspace.xml" />
         <option value="$PROJECT_DIR$/Inputs/Day8.txt" />
-        <option value="$PROJECT_DIR$/Program.fs" />
         <option value="$PROJECT_DIR$/Day8.fs" />
+        <option value="$PROJECT_DIR$/TestProject/Test-Day8.fs" />
+        <option value="$PROJECT_DIR$/TestProject/Test-Day7-unquote.fs" />
+        <option value="$PROJECT_DIR$/Program.fs" />
       </list>
     </option>
   </component>
@@ -307,22 +309,22 @@
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2663" y="298" width="424" height="491" key="FileChooserDialogImpl/0.27.1920.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1606899033237" />
-    <state width="1874" height="378" key="GridCell.Tab.0.bottom" timestamp="1607444504255">
+    <state width="1874" height="262" key="GridCell.Tab.0.bottom" timestamp="1607499990294">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state width="1874" height="378" key="GridCell.Tab.0.bottom/0.27.1920.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1607444504255" />
-    <state width="1874" height="378" key="GridCell.Tab.0.center" timestamp="1607444504255">
+    <state width="1874" height="262" key="GridCell.Tab.0.bottom/0.27.1920.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1607499990294" />
+    <state width="1874" height="262" key="GridCell.Tab.0.center" timestamp="1607499990294">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state width="1874" height="378" key="GridCell.Tab.0.center/0.27.1920.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1607444504255" />
-    <state width="1874" height="378" key="GridCell.Tab.0.left" timestamp="1607444504255">
+    <state width="1874" height="262" key="GridCell.Tab.0.center/0.27.1920.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1607499990294" />
+    <state width="1874" height="262" key="GridCell.Tab.0.left" timestamp="1607499990294">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state width="1874" height="378" key="GridCell.Tab.0.left/0.27.1920.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1607444504255" />
-    <state width="1874" height="378" key="GridCell.Tab.0.right" timestamp="1607444504255">
+    <state width="1874" height="262" key="GridCell.Tab.0.left/0.27.1920.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1607499990294" />
+    <state width="1874" height="262" key="GridCell.Tab.0.right" timestamp="1607499990294">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state width="1874" height="378" key="GridCell.Tab.0.right/0.27.1920.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1607444504255" />
+    <state width="1874" height="262" key="GridCell.Tab.0.right/0.27.1920.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1607499990294" />
     <state width="1874" height="378" key="GridCell.Tab.1.bottom" timestamp="1607444504706">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>

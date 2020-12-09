@@ -9,8 +9,8 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <Compile Include="Test-Day7-xunit.fs" />
-        <Compile Include="Test-Day7-unquote.fs" />
+        <Compile Include="Test-Day7.fs" />
+        <Compile Include="Test-Day8.fs" />
         <Compile Include="Program.fs" />
     </ItemGroup>
 

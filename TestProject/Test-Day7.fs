@@ -1,6 +1,4 @@
-module Test_Day7_unquote
-
-//module Tests
+module Test_Day7
 
 open System
 open Xunit
@@ -30,20 +28,25 @@ let input2 = ["shiny gold bags contain 2 dark red bags."
 
 [<Fact>]
 let ``Test Day 7/1 Test`` () =
-    test <@ 4 = (input1 |> (Day7.puzzle1 "shiny gold")) @>
+    // xunit:
+    Assert.Equal(4, input1 |> (Day7.puzzle1 "shiny gold"))
+    
+    // unquote:
+    // test <@ 4 = (input1 |> (Day7.puzzle1 "shiny gold")) @>
+    // 4 =! (input1 |> (Day7.puzzle1 "shiny gold"))
     
 [<Fact>]
 let ``Test Day 7/1 Final`` () =
-    test <@ Ok 378 = (readLines "Inputs/Day7.txt" |> Result.map (Day7.puzzle1 "shiny gold")) @>
+    Ok 378 =! (readLines "Inputs/Day7.txt" |> Result.map (Day7.puzzle1 "shiny gold"))
     
 [<Fact>]
 let ``Test Day 7/2 Test1`` () =
-    test <@ 32 = (input1 |> (Day7.puzzle2 "shiny gold")) @>
+    32 =! (input1 |> (Day7.puzzle2 "shiny gold"))
     
 [<Fact>]
 let ``Test Day 7/2 Test2`` () =
-    test <@ 126 = (input2 |> (Day7.puzzle2 "shiny gold")) @>
+    126 =! (input2 |> (Day7.puzzle2 "shiny gold"))
     
 [<Fact>]
 let ``Test Day 7/2 Final`` () =
-    test <@ Ok 27526 = (readLines "Inputs/Day7.txt" |> Result.map (Day7.puzzle2 "shiny gold")) @>
+    Ok 27526 =! (readLines "Inputs/Day7.txt" |> Result.map (Day7.puzzle2 "shiny gold"))
