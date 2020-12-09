@@ -113,6 +113,7 @@ let testAll () =
     
 [<EntryPoint>]
 let main argv =
+    (readLines "Inputs/Day9.txt" |> Result.map (Day9_2.puzzle 15690279L)) |> ignore
 //    let input = ({1 .. 25} |> Seq.toList) @ [26; 49; 100; 50]
 //    let preambleSize = 25
 //    printfn "%A" (input |> Day9.checkXMAS preambleSize |> (Result.map Seq.toList))

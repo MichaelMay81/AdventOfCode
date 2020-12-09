@@ -1,4 +1,4 @@
-module AoC_Mike.Day9
+module AoC_Mike.Day9_1
 
 open System.Numerics
 open FSharpPlus
@@ -81,7 +81,7 @@ let checkXMAS2 (preambleSize:int) (input:int64 seq) : Result<Result<(int64*int64
         |> Ok
     
 
-let puzzle1 (preambleSize:int) (input:string seq) : Result<int64, string> =
+let puzzle (preambleSize:int) (input:string seq) : Result<int64, string> =
     input
     |> Seq.toList
     |> List.map int64

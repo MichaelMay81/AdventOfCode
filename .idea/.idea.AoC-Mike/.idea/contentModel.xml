@@ -18,7 +18,8 @@
       <e p="Day6.fs" t="Include" />
       <e p="Day7.fs" t="Include" />
       <e p="Day8.fs" t="Include" />
-      <e p="Day9.fs" t="Include" />
+      <e p="Day9-1.fs" t="Include" />
+      <e p="Day9-2.fs" t="Include" />
       <e p="Helpers.fs" t="Include" />
       <e p="Inputs" t="Include">
         <e p="Day1.txt" t="Include" />
