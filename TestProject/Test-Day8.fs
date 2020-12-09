@@ -13,8 +13,22 @@ let input = ["nop +0"; "acc +1"; "jmp +4"; "acc +3"; "jmp -3"; "acc -99"; "acc +
 
 [<Fact>]
 let ``Test Day 8/1 Test`` () =
-    5 =! (input |> Day8.puzzle1)
+    Error 5 =! (input |> Day8_1.puzzle)
 
 [<Fact>]
 let ``Test Day 8/1 Final`` () =
-    Ok 1521 =! (readLines "Inputs/Day8.txt" |> Result.map Day8.puzzle1)
+    Error 1521 =! (readLines "Inputs/Day8.txt"
+               |> function
+                  | Error _ -> Ok 0
+                  | Ok input -> input |> Day8_1.puzzle)
+    
+[<Fact>]
+let ``Test Day 8/2 Test`` () =
+    Ok 8 =! (input |> Day8_2.puzzle)
+    
+[<Fact>]
+let ``Test Day 8/2 Final`` () =
+    Ok 1016 =! (readLines "Inputs/Day8.txt"
+               |> function
+                  | Error _ -> Ok 0
+                  | Ok input -> input |> Day8_2.puzzle)

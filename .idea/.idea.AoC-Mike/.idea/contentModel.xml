@@ -17,7 +17,8 @@
       <e p="Day5.fs" t="Include" />
       <e p="Day6.fs" t="Include" />
       <e p="Day7.fs" t="Include" />
-      <e p="Day8.fs" t="Include" />
+      <e p="Day8-1.fs" t="Include" />
+      <e p="Day8-2.fs" t="Include" />
       <e p="Day9-1.fs" t="Include" />
       <e p="Day9-2.fs" t="Include" />
       <e p="Helpers.fs" t="Include" />

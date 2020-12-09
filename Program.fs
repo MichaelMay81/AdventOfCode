@@ -113,14 +113,7 @@ let testAll () =
     
 [<EntryPoint>]
 let main argv =
-    (readLines "Inputs/Day9.txt" |> Result.map (Day9_2.puzzle 15690279L)) |> ignore
-//    let input = ({1 .. 25} |> Seq.toList) @ [26; 49; 100; 50]
-//    let preambleSize = 25
-//    printfn "%A" (input |> Day9.checkXMAS preambleSize |> (Result.map Seq.toList))
-//    printfn "%A" (input |> Day9.checkXMAS2 preambleSize |> (Result.map Seq.toList))
-
-  //  Day9.createTuples 4 input |> (Result.map (Seq.toList >> List.map (printfn "%A")))
-    
-//    Ok [Some (1,25); Some (24,25); None; None] =! 
+    let input = ["nop +0"; "acc +1"; "jmp +4"; "acc +3"; "jmp -3"; "acc -99"; "acc +1"; "jmp -4"; "acc +6"]
+    input |> Day8_2.puzzle |> ignore
     
     0 // return an integer exit code
