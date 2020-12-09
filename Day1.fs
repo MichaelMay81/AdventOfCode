@@ -33,8 +33,8 @@ let tuplesPerm1 input =
 //    | el1 :: input -> (loopi2 el1 input [])
 
 // third try, tuple permutation with recursive function and map for inner loop
-let tuplesPerm3 (input:int list) : (int*int) seq =
-    let rec loop (el1:int option) (accLi:(int*int) seq) (inLi:int list) : (int*int) seq =
+let tuplesPerm3 (input:'a list) : ('a*'a) seq =
+    let rec loop (el1:'a option) (accLi:('a*'a) seq) (inLi:'a list) : ('a*'a) seq =
         match el1, inLi with
         // stop condition
         | _, [] -> accLi
