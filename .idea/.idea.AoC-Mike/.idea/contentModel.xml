@@ -10,6 +10,7 @@
       <e p="AoC-Mike.fsproj" t="IncludeRecursive" />
       <e p="AoC-Mike.sln" t="IncludeFlat" />
       <e p="Day1.fs" t="Include" />
+      <e p="Day10.fs" t="Include" />
       <e p="Day2.fs" t="Include" />
       <e p="Day3.fs" t="Include" />
       <e p="Day4-1.fs" t="Include" />
@@ -24,6 +25,7 @@
       <e p="Helpers.fs" t="Include" />
       <e p="Inputs" t="Include">
         <e p="Day1.txt" t="Include" />
+        <e p="Day10.txt" t="Include" />
         <e p="Day2.txt" t="Include" />
         <e p="Day3.txt" t="Include" />
         <e p="Day4.txt" t="Include" />
@@ -36,6 +38,7 @@
       <e p="Program.fs" t="Include" />
       <e p="TestProject" t="IncludeRecursive">
         <e p="Program.fs" t="Include" />
+        <e p="Test-Day10.fs" t="Include" />
         <e p="Test-Day7.fs" t="Include" />
         <e p="Test-Day8.fs" t="Include" />
         <e p="Test-Day9.fs" t="Include" />
