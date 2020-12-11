@@ -113,7 +113,18 @@ let testAll () =
     
 [<EntryPoint>]
 let main argv =
-    let input = ["nop +0"; "acc +1"; "jmp +4"; "acc +3"; "jmp -3"; "acc -99"; "acc +1"; "jmp -4"; "acc +6"]
-    input |> Day8_2.puzzle |> ignore
+    printfn "\n->%A" (readLines "Inputs/Day10.txt" |> Result.map Day10_2.puzzle)
+    let input1 = [16; 10; 15; 5; 1; 11; 7; 19; 6; 12; 4]
+    let result = [[0; 1; 4; 5; 6; 7; 10; 11; 12; 15; 16; 19; 22]
+                  [0; 1; 4; 5; 6; 7; 10; 12; 15; 16; 19; 22]
+                  [0; 1; 4; 5; 7; 10; 11; 12; 15; 16; 19; 22]
+                  [0; 1; 4; 5; 7; 10; 12; 15; 16; 19; 22]
+                  [0; 1; 4; 6; 7; 10; 11; 12; 15; 16; 19; 22]
+                  [0; 1; 4; 6; 7; 10; 12; 15; 16; 19; 22]
+                  [0; 1; 4; 7; 10; 11; 12; 15; 16; 19; 22]
+                  [0; 1; 4; 7; 10; 12; 15; 16; 19; 22]] |> List.rev |> List.map List.rev
+    //input1 |> Day10_2.calcValidPermutations2 |> ignore
+//    let foobar = [2; 3; 4; 5] |> Day10_2.calcValidPermutations
+//    printfn "%A\n%A" foobar (foobar |> List.length)
     
     0 // return an integer exit code

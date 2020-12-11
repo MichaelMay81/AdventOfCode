@@ -42,8 +42,8 @@ let checkXMAS (preambleSize:int) (input:int seq) : Result<(int*int*int) option s
                        |> (Seq.skip ((preambleSize-1) * (id - preambleSize)))
                        |> Seq.take (nthTriangularNumber (preambleSize - 1))
         let element = input |> Seq.item id
-//        prbigintfn "%A %A %A" (id - preambleSize) ((preambleSize-1) * (id - preambleSize)) (nthTriangularNumber (preambleSize-1))
-//        prbigintfn "%A is in %A" element preamble
+//        printfn "%A %A %A" (id - preambleSize) ((preambleSize-1) * (id - preambleSize)) (nthTriangularNumber (preambleSize-1))
+//        printfn "%A is in %A" element preamble
         preamble
         |> Seq.filter (fun (_, _, el3) -> el3 = element)
         |> Seq.tryHead
