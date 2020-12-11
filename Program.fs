@@ -113,18 +113,32 @@ let testAll () =
     
 [<EntryPoint>]
 let main argv =
-    printfn "\n->%A" (readLines "Inputs/Day10.txt" |> Result.map Day10_2.puzzle)
-    let input1 = [16; 10; 15; 5; 1; 11; 7; 19; 6; 12; 4]
-    let result = [[0; 1; 4; 5; 6; 7; 10; 11; 12; 15; 16; 19; 22]
-                  [0; 1; 4; 5; 6; 7; 10; 12; 15; 16; 19; 22]
-                  [0; 1; 4; 5; 7; 10; 11; 12; 15; 16; 19; 22]
-                  [0; 1; 4; 5; 7; 10; 12; 15; 16; 19; 22]
-                  [0; 1; 4; 6; 7; 10; 11; 12; 15; 16; 19; 22]
-                  [0; 1; 4; 6; 7; 10; 12; 15; 16; 19; 22]
-                  [0; 1; 4; 7; 10; 11; 12; 15; 16; 19; 22]
-                  [0; 1; 4; 7; 10; 12; 15; 16; 19; 22]] |> List.rev |> List.map List.rev
-    //input1 |> Day10_2.calcValidPermutations2 |> ignore
-//    let foobar = [2; 3; 4; 5] |> Day10_2.calcValidPermutations
-//    printfn "%A\n%A" foobar (foobar |> List.length)
+    let input1 = ["L.LL.LL.LL"
+                  "LLLLLLL.LL"
+                  "L.L.L..L.."
+                  "LLLL.LL.LL"
+                  "L.LL.LL.LL"
+                  "L.LLLLL.LL"
+                  "..L.L....."
+                  "LLLLLLLLLL"
+                  "L.LLLLLL.L"
+                  "L.LLLLL.LL"]
+    let input2 = ["#.##.##.##"
+                  "#######.##"
+                  "#.#.#..#.."
+                  "####.##.##"
+                  "#.##.##.##"
+                  "#.#####.##"
+                  "..#.#....."
+                  "##########"
+                  "#.######.#"
+                  "#.#####.##"]
+//    printfn "%A" (input |> Day11.puzzle1)
+    printfn "%A" (input2
+                 |> Day11.stringsToPositions
+                 //|> Day11.analysePositions
+                 |> Day11.analysePositions
+                 |> Day11.positionsToString)
+    
     
     0 // return an integer exit code
