@@ -13,15 +13,33 @@ let ``Test Day 12/1 Test`` () =
     let input = ["F10"; "N3"; "F7"; "R90"; "F11"]
     
     25 =! (input
-           |> List.map Day12.parseNavInst
-           |> List.fold (fun state navInst -> Day12.processInstruction state navInst) Day12.initState
-           |> Day12.manhattenDistance)
+           |> List.map Day12_1.parseNavInst
+           |> List.fold (fun state navInst -> Day12_1.processInstruction state navInst) Day12_1.initState
+           |> Day12_1.manhattanDistance)
     
 [<Fact>]
 let ``Test Day 12/1 Final`` () =
     
-    Ok 25 =! (readLines "Inputs/Day12.txt"
-             |> Result.map (
-                           Seq.map Day12.parseNavInst
-                           >> Seq.fold (fun state navInst -> Day12.processInstruction state navInst) Day12.initState
-                           >> Day12.manhattenDistance))
+    Ok 1631 =! (readLines "Inputs/Day12.txt"
+                |> Result.map (
+                           Seq.map Day12_1.parseNavInst
+                           >> Seq.fold (fun state navInst -> Day12_1.processInstruction state navInst) Day12_1.initState
+                           >> Day12_1.manhattanDistance))
+    
+[<Fact>]
+let ``Test Day 12/2 Test`` () =
+    let input = ["F10"; "N3"; "F7"; "R90"; "F11"]
+    
+    286 =! (input
+            |> List.map Day12_1.parseNavInst
+            |> List.fold (fun state navInst -> Day12_2.processInstruction state navInst) Day12_2.initState
+            |> (fun state -> state.Ship |> Day12_2.manhattanDistance))
+    
+[<Fact>]
+let ``Test Day 12/2 Final`` () =
+    
+    Ok 1631 =! (readLines "Inputs/Day12.txt"
+                |> Result.map (
+                           Seq.map Day12_1.parseNavInst
+                           >> Seq.fold (fun state navInst -> Day12_2.processInstruction state navInst) Day12_2.initState
+                           >> (fun state -> state.Ship |> Day12_2.manhattanDistance)))

@@ -1,4 +1,4 @@
-module AoC_Mike.Day12
+module AoC_Mike.Day12_1
 
 open System
 open System.Reflection.Metadata
@@ -77,5 +77,5 @@ let parseNavInst (navIntStr:string) : NavInstruction =
     | 'F' -> Move (Forward value)
     | _ -> failwith "this shouldn't happen"
     
-let manhattenDistance (state:State) : int =
+let manhattanDistance (state:State) : int =
     Math.Abs state.Lat + Math.Abs state.Long
