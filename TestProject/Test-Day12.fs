@@ -1,6 +1,5 @@
 module Test_Day12
 
-
 open Xunit
 open Swensen.Unquote
 open AoC_Mike.Helpers
@@ -38,8 +37,8 @@ let ``Test Day 12/2 Test`` () =
 [<Fact>]
 let ``Test Day 12/2 Final`` () =
     
-    Ok 1631 =! (readLines "Inputs/Day12.txt"
-                |> Result.map (
+    Ok 58606 =! (readLines "Inputs/Day12.txt"
+                 |> Result.map (
                            Seq.map Day12_1.parseNavInst
                            >> Seq.fold (fun state navInst -> Day12_2.processInstruction state navInst) Day12_2.initState
                            >> (fun state -> state.Ship |> Day12_2.manhattanDistance)))
