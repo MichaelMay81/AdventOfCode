@@ -14,8 +14,21 @@ let ``Test Day 14/1 Test`` () =
                  "mem[7] = 101"
                  "mem[8] = 0"]
     
-    165L =! (input |> Day14.puzzle1)
+    165L =! (input |> Day14_1.puzzle)
 
 [<Fact>]
 let ``Test Day 14/1 Final`` () =
-    Ok 2238L =! (readLines "Inputs/Day14.txt" |> Result.map Day14.puzzle1)
+    Ok 7440382076205L =! (readLines "Inputs/Day14.txt" |> Result.map Day14_1.puzzle)
+    
+[<Fact>]
+let ``Test Day 14/2 Test`` () =
+    let input = ["mask = 000000000000000000000000000000X1001X"
+                 "mem[42] = 100"
+                 "mask = 00000000000000000000000000000000X0XX"
+                 "mem[26] = 1"]
+    
+    208L =! (input |> Day14_2.puzzle)
+    
+[<Fact>]
+let ``Test Day 14/2 Final`` () =
+    Ok 4200656704538L =! (readLines "Inputs/Day14.txt" |> Result.map Day14_2.puzzle)

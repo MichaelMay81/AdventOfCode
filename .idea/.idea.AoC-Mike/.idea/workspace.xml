@@ -17,13 +17,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6c6a4c35-d00c-4c83-a840-e92a283c4033" name="Default Changelist" comment="Day 11 Puzzle 1">
-      <change afterPath="$PROJECT_DIR$/Day14.fs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Inputs/Day14.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TestProject/Test-Day14.fs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Day14-2.fs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.AoC-Mike/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AoC-Mike/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.AoC-Mike/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AoC-Mike/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AoC-Mike.fsproj" beforeDir="false" afterPath="$PROJECT_DIR$/AoC-Mike.fsproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestProject/TestProject.fsproj" beforeDir="false" afterPath="$PROJECT_DIR$/TestProject/TestProject.fsproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Day14.fs" beforeDir="false" afterPath="$PROJECT_DIR$/Day14-1.fs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestProject/Test-Day14.fs" beforeDir="false" afterPath="$PROJECT_DIR$/TestProject/Test-Day14.fs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,8 +44,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Day1_1.fs" />
-        <option value="$PROJECT_DIR$/Inputs/Day2.txt" />
         <option value="$PROJECT_DIR$/Inputs/Day3.txt" />
         <option value="$PROJECT_DIR$/Day2.fs" />
         <option value="$PROJECT_DIR$/Helpers.fs" />
@@ -95,6 +92,8 @@
         <option value="$PROJECT_DIR$/TestProject/Test-Day13.fs" />
         <option value="$PROJECT_DIR$/Inputs/Day14.txt" />
         <option value="$PROJECT_DIR$/Day14.fs" />
+        <option value="$PROJECT_DIR$/Day14-1.fs" />
+        <option value="$PROJECT_DIR$/Day14-2.fs" />
         <option value="$PROJECT_DIR$/TestProject/Test-Day14.fs" />
       </list>
     </option>
@@ -195,7 +194,7 @@
       <workItem from="1607356333348" duration="6125000" />
       <workItem from="1607673779982" duration="14654000" />
       <workItem from="1607885034441" duration="14484000" />
-      <workItem from="1607932975362" duration="4749000" />
+      <workItem from="1607932975362" duration="6031000" />
     </task>
     <task id="LOCAL-00001" summary="Day1">
       <created>1606847743536</created>
@@ -365,7 +364,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607901675094</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="Day14 Puzzle 1">
+      <created>1607938016670</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1607938016670</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -409,17 +415,18 @@
     <MESSAGE value="Day12 Puzzle1" />
     <MESSAGE value="Day12 Puzzle2" />
     <MESSAGE value="Day13 Puzzle1" />
-    <option name="LAST_COMMIT_MESSAGE" value="Day13 Puzzle1" />
+    <MESSAGE value="Day14 Puzzle 1" />
+    <option name="LAST_COMMIT_MESSAGE" value="Day14 Puzzle 1" />
   </component>
   <component name="WindowStateProjectService">
     <state width="531" height="525" key="DebuggerActiveHint" timestamp="1607901579353">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state width="531" height="525" key="DebuggerActiveHint/0.27.1920.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1607901579353" />
-    <state x="2663" y="298" width="424" height="491" key="FileChooserDialogImpl" timestamp="1607538086852">
+    <state x="2663" y="298" width="424" height="491" key="FileChooserDialogImpl" timestamp="1607938185005">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="2663" y="298" width="424" height="491" key="FileChooserDialogImpl/0.27.1920.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1607538086852" />
+    <state x="2663" y="298" width="424" height="491" key="FileChooserDialogImpl/0.27.1920.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1607938185005" />
     <state width="1874" height="373" key="GridCell.Tab.0.bottom" timestamp="1607937727471">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
@@ -574,14 +581,14 @@
           <option name="timeStamp" value="6" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Day14.fs</url>
+          <url>file://$PROJECT_DIR$/Day14-1.fs</url>
           <line>35</line>
           <properties documentPath="$PROJECT_DIR$/Day14.fs" initialLine="35">
             <startOffsets>
-              <option value="787" />
+              <option value="777" />
             </startOffsets>
             <endOffsets>
-              <option value="831" />
+              <option value="821" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="7" />
