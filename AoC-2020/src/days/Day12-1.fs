@@ -1,4 +1,4 @@
-module AoC_Mike.Day12_1
+module AoC2020.Day12_1
 
 open System
 open System.Reflection.Metadata

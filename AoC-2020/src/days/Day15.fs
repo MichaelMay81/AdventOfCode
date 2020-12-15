@@ -1,4 +1,4 @@
-module AoC_Mike.Day15
+module AoC2020.Day15
 
 type State = {
     Turn : int

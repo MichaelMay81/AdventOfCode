@@ -9,6 +9,12 @@
     </PropertyGroup>
 
     <ItemGroup>
+        <Compile Include="src\tests\Test-Day1.fs" />
+        <Compile Include="src\tests\Test-Day2.fs" />
+        <Compile Include="src\tests\Test-Day3.fs" />
+        <Compile Include="src\tests\Test-Day4.fs" />
+        <Compile Include="src\tests\Test-Day5.fs" />
+        <Compile Include="src\tests\Test-Day6.fs" />
         <Compile Include="src\tests\Test-Day7.fs" />
         <Compile Include="src\tests\Test-Day8.fs" />
         <Compile Include="src\tests\Test-Day9.fs" />

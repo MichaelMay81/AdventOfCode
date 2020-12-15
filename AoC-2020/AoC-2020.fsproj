@@ -44,6 +44,7 @@
         <Content Include="inputs\Day12.txt" />
         <Content Include="inputs\Day13.txt" />
         <Content Include="inputs\Day14.txt" />
+        <Content Include="fsharplint.json" />
     </ItemGroup>
 
     <ItemGroup>

@@ -1,4 +1,4 @@
-module AoC_Mike.Day5
+module AoC2020.Day5
 
 open FSharpPlus
 
@@ -20,7 +20,7 @@ let puzzleStringToInt (input: string) : int =
                             |> Option.map (float >> (*) (2. ** (float i)) >> int))
 //    |> Seq.map (fun v -> printfn "%A" v; v)
     |> Seq.choose id
-    |> Seq.fold (+) 0
+    |> Seq.sum
     
 let puzzle1 (input: string seq) =
     let seatsTaken = input |> Seq.map puzzleStringToInt

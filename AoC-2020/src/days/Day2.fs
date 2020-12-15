@@ -1,4 +1,4 @@
-module AoC_Mike.Day2
+module AoC2020.Day2
 
 open FSharpPlus
 open Helpers
@@ -44,7 +44,7 @@ let isPassCorrect (polPass: PolPass) : bool =
         count >= policy.Min && count <= policy.Max
     | { Policy= Policy2 policy; Password=password } ->
         password
-        |> Seq.mapi (fun i s -> (i+1),s)
+        |> Seq.mapi (fun i s -> (i+1), s)
         |> Seq.filter (fun (i,s) -> (s = policy.Char) && (i = policy.Pos1 || i = policy.Pos2))
         |> Seq.length = 1
 

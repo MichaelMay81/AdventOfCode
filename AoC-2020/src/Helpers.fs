@@ -1,4 +1,4 @@
-module AoC_Mike.Helpers
+module AoC2020.Helpers
 
 open System.IO
 
@@ -14,23 +14,23 @@ let readLines filePath : Result<string seq, string> =
     | :? FileNotFoundException -> Error ("Couldn't load file " + filePath)
 
 // ---- Error Handling ----
-let outputError (input: Result<'a, string>) : unit =
+let outputError (input:Result<'a, string>) : unit =
     match input with
     | Error str -> printfn "Error: %s" str
     | _ -> ()
 
-let outputErrorAndDefault (defaultValue:'a) (input: Result<'a, string>) : 'a =
+let outputErrorAndDefault (defaultValue:'a) (input:Result<'a, string>) : 'a =
     match input with
     | Error _ ->
-            outputError input
-            defaultValue
+        outputError input
+        defaultValue
     | Ok value -> value
     
 let addLineNumToError i result = match result with
                                  | Error e -> Error (e + ", line " + i.ToString())
                                  | Ok v -> Ok v
                                  
-let outputAndRemoveErrors (input: Result<'a, string> seq) : 'a seq =
+let outputAndRemoveErrors (input:Result<'a, string> seq) : 'a seq =
     input |> Seq.mapi addLineNumToError
           |> Seq.map (tee outputError)
           |> Seq.choose (function Ok value -> Some value | Error _ -> None)

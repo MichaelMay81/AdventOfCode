@@ -1,4 +1,4 @@
-module AoC_Mike.Day9_1
+module AoC2020.Day9_1
 
 open System.Numerics
 open FSharpPlus

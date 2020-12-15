@@ -1,4 +1,4 @@
-module AoC_Mike.Day8_1
+module AoC2020.Day8_1
 
 open FSharpPlus
 open Helpers
@@ -10,15 +10,15 @@ type Instruction =
     
 type Program = {
     Instructions : Instruction list
-    Instr_pointer : int
-    Instr_counter : int Set
+    InstrPointer : int
+    InstrCounter : int Set
     Accumulator : int
 }
 
 let newProgram (instructions : Instruction list)= {
     Instructions = instructions
-    Instr_pointer = 0
-    Instr_counter = Set.empty
+    InstrPointer = 0
+    InstrCounter = Set.empty
     Accumulator = 0
 }
 
@@ -36,22 +36,22 @@ let parseInstruction (cmd:string) : Result<Instruction, string> =
 
 let execProgram (instruction:Instruction list) : Result<Program, Program*string> =
     let rec loop (program: Program) : Result<Program, Program*string> =
-        if program.Instr_pointer = (program.Instructions |> List.length) then
+        if program.InstrPointer = (program.Instructions |> List.length) then
             Ok program
-        elif program.Instr_pointer < 0 then
+        elif program.InstrPointer < 0 then
             Error (program, "Instruction pointer can't be below Zero!")
-        elif program.Instr_pointer > (program.Instructions |> List.length) then
+        elif program.InstrPointer > (program.Instructions |> List.length) then
             Error (program, "Instruction pointer can't be higher then size of Instructions!")
-        elif program.Instr_counter |> Set.contains program.Instr_pointer then
+        elif program.InstrCounter |> Set.contains program.InstrPointer then
             Error (program, "Infinite Loop detected!")
         else
-            let program = { program with Instr_counter = program.Instr_counter.Add program.Instr_pointer }
-            match program.Instructions.[program.Instr_pointer] with
+            let program = { program with InstrCounter = program.InstrCounter.Add program.InstrPointer }
+            match program.Instructions.[program.InstrPointer] with
             | Acc value -> loop { program with
                                     Accumulator = program.Accumulator + value
-                                    Instr_pointer = program.Instr_pointer + 1 }
-            | Jmp value -> loop { program with Instr_pointer = program.Instr_pointer + value }
-            | Nop _ -> loop { program with Instr_pointer = program.Instr_pointer + 1 }
+                                    InstrPointer = program.InstrPointer + 1 }
+            | Jmp value -> loop { program with InstrPointer = program.InstrPointer + value }
+            | Nop _ -> loop { program with InstrPointer = program.InstrPointer + 1 }
     loop (newProgram instruction)
 
 let puzzle (input:string seq): Result<int, int> =

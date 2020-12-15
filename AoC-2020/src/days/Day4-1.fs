@@ -1,4 +1,4 @@
-module AoC_Mike.Day4_1
+module AoC2020.Day4_1
 
 open FSharpPlus
 open FSharpPlus.Data
@@ -21,8 +21,8 @@ let splitIntoPassportStringLists input =
     
     (Seq.append [-1] <| Seq.append emptyIds [Seq.length input])
     |> Seq.pairwise
-    |> Seq.map (fun (id1, id2) -> (id1+1, id2-id1-1))
-    |> Seq.map (fun (sSteps, tSteps) -> input |> Seq.skip sSteps |> Seq.take tSteps)
+    |> Seq.map ((fun (id1, id2) -> (id1+1, id2-id1-1))
+             >> (fun (sSteps, tSteps) -> input |> Seq.skip sSteps |> Seq.take tSteps))
 
 let splitIntoPassportTuples =
     String.split [" "]

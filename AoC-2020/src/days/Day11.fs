@@ -1,4 +1,4 @@
-module AoC_Mike.Day11
+module AoC2020.Day11
 
 open FSharpPlus
 
@@ -93,5 +93,4 @@ let puzzle1 (positions:string seq) : int =
     |> stringsToPositions
     |> loop 1
     |> snd
-    |> List.map (List.filter ((=) (Seat Occupied)) >> List.length)
-    |> List.sum
+    |> List.sumBy (List.filter ((=) (Seat Occupied)) >> List.length)

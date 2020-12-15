@@ -1,4 +1,4 @@
-module AoC_Mike.Day8_2
+module AoC2020.Day8_2
 
 open System.Runtime.CompilerServices
 open FSharpPlus

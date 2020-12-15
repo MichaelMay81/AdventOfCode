@@ -1,4 +1,4 @@
-module AoC_Mike.Day14_1
+module AoC2020.Day14_1
 
 open System
 open FSharpPlus

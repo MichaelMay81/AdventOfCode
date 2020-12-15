@@ -1,29 +1,28 @@
-
 {
   "ignoreFiles": [
     "*assemblyinfo.*"
   ],
   "formatting": {
     "typedItemSpacing": {
-      "enabled": true,
+      "enabled": false,
       "config": {
         "typedItemStyle": "NoSpaces"
       }
     },
-    "typePrefixing": { "enabled": true },
+    "typePrefixing": { "enabled": false },
     "unionDefinitionIndentation": { "enabled": true },
     "moduleDeclSpacing": { "enabled": false },
     "classMemberSpacing": { "enabled": false },
     "tupleFormatting": {
       "tupleCommaSpacing": { "enabled": true },
       "tupleIndentation": { "enabled": true },
-      "tupleParentheses": { "enabled": true }
+      "tupleParentheses": { "enabled": false }
     },
     "patternMatchFormatting": {
       "patternMatchClausesOnNewLine": { "enabled": false },
       "patternMatchOrClausesOnNewLine": { "enabled": false },
       "patternMatchClauseIndentation": {
-        "enabled": true,
+        "enabled": false,
         "config": {
           "allowSingleLineLambda": false
         }
@@ -171,7 +170,7 @@
         "enabled": true,
         "config": {
           "naming": "PascalCase",
-          "underscores": "None"
+          "underscores": "AllowAny"
         }
       },
       "literalNames": {
@@ -276,7 +275,7 @@
       }
     },
     "trailingWhitespaceOnLine": {
-      "enabled": true,
+      "enabled": false,
       "config": {
         "numberOfSpacesAllowed": 0,
         "oneSpaceAllowedAfterOperator": true,
@@ -292,8 +291,8 @@
     "noTabCharacters": { "enabled": true }
   },
   "hints": {
-    "add": [],
-    "ignore": [
+    "ignore": [],
+    "add": [
       "List.head (List.sort x) ===> List.min x",
       "List.head (List.sortBy f x) ===> List.minBy f x",
 
@@ -346,7 +345,12 @@
       "List.isEmpty [] ===> true",
       "Array.isEmpty [||] ===> true",
 
-      "Array.append a (Array.append b c) ===> Array.concat [|a; b; c|]"
+      "Array.append a (Array.append b c) ===> Array.concat [|a; b; c|]",
+
+      "Seq.fold ( + ) 0 x ===> Seq.sum x",
+      "Seq.sum (Seq.map x y) ===> Seq.sumBy x y",
+      "List.sum (List.map x y) ===> List.sumBy x y",
+      "Seq.concat (Seq.map f x) ===> Seq.collect f x"
     ]
   }
 }

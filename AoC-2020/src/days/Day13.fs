@@ -1,4 +1,4 @@
-module AoC_Mike.Day13
+module AoC2020.Day13
 
 open Microsoft.VisualBasic.CompilerServices
 
@@ -7,11 +7,9 @@ let puzzle1 (input:string seq) : int =
     let foobar = 
         input
         |> Seq.skip 1
-        |> Seq.map (fun str -> str.Split ",")
-        |> Seq.concat
+        |> Seq.collect (fun str -> str.Split ",")
         |> Seq.filter ((<>) "x")
-        |> Seq.map int
-        |> Seq.map (fun x -> x, x - (leaveTime % x))
+        |> Seq.map (int >> (fun x -> x, x - (leaveTime % x)))
         |> Seq.toList
         
     foobar

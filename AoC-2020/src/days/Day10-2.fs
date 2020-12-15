@@ -1,4 +1,4 @@
-module AoC_Mike.Day10_2
+module AoC2020.Day10_2
 
 open FSharpPlus
 open Helpers

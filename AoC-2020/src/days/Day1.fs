@@ -1,4 +1,4 @@
-module AoC_Mike.Day1
+module AoC2020.Day1
 
 // first try, tuple permutations with two recursive functions
 let tuplesPerm1 input =
@@ -49,7 +49,7 @@ let tuplesPerm3 (input:'a list) : ('a*'a) seq =
 
 // triple permutation with recursive function and map for inner loop
 let triplesPerm (input:int list) : (int*int*int) seq =
-    let rec loop (el1Opt:int option) (el2Opt: int option) (accLi:(int*int*int) seq) (inLi1:int list) (inLi2:int list) : (int*int*int) seq =
+    let rec loop (el1Opt:int option) (el2Opt:int option) (accLi:(int*int*int) seq) (inLi1:int list) (inLi2:int list) : (int*int*int) seq =
         match el1Opt, el2Opt, inLi1, inLi2 with
         // stop condition Final
         | _, _, [], _ -> accLi

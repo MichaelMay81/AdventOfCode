@@ -1,4 +1,4 @@
-module AoC_Mike.Day3
+module AoC2020.Day3
 
 open FSharpPlus
 open Helpers
@@ -48,7 +48,7 @@ let puzzle2 (input: string[]) =
      (7, 1)
      (1, 2)]
     |> List.map (fun (v1, v2) -> puzzle input v1 v2)
-    |> List.fold (fun a v -> a * v) 1
+    |> List.fold (*) 1
     
 //    puzzle input 1 1 *
 //    puzzle input 3 1 *

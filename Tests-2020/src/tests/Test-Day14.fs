@@ -2,8 +2,8 @@ module Test_Day14
 
 open Xunit
 open Swensen.Unquote
-open AoC_Mike.Helpers
-open AoC_Mike
+open AoC2020.Helpers
+open AoC2020
 
 let getPuzzleInput = Program.getPuzzleInput
 
