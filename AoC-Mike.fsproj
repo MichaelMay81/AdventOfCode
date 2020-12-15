@@ -28,6 +28,7 @@
         <Compile Include="Day13.fs" />
         <Compile Include="Day14-1.fs" />
         <Compile Include="Day14-2.fs" />
+        <Compile Include="Day15.fs" />
         <Compile Include="Program.fs" />
         <Content Include="Inputs\Day1.txt" />
         <Content Include="Inputs\Day2.txt" />
@@ -49,5 +50,9 @@
       <PackageReference Include="FSharpPlus" Version="1.2.0-CI01665" />
       <PackageReference Include="Unquote" Version="5.0.0" />
     </ItemGroup>
+
+    <Target Name="FSharpLint" AfterTargets="BeforeBuild">
+        <Exec Command="dotnet fsharplint -f msbuild lint --lint-config $(MSBuildThisFileDirectory)/fsharplint.json $(MSBuildProjectFullPath)" ConsoleToMsBuild="true" IgnoreExitCode="true" />
+    </Target>
 
 </Project>
