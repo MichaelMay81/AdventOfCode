@@ -17,13 +17,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6c6a4c35-d00c-4c83-a840-e92a283c4033" name="Default Changelist" comment="Day 11 Puzzle 1">
-      <change afterPath="$PROJECT_DIR$/Day15.fs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TestProject/Test-Day15.fs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.AoC-Mike/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AoC-Mike/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.AoC-Mike/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AoC-Mike/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AoC-Mike.fsproj" beforeDir="false" afterPath="$PROJECT_DIR$/AoC-Mike.fsproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Program.fs" beforeDir="false" afterPath="$PROJECT_DIR$/Program.fs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestProject/TestProject.fsproj" beforeDir="false" afterPath="$PROJECT_DIR$/TestProject/TestProject.fsproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestProject/Test-Day15.fs" beforeDir="false" afterPath="$PROJECT_DIR$/TestProject/Test-Day15.fs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,6 +45,7 @@
     <setting file="file://$PROJECT_DIR$/TestProject/Program.fs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Day12-2.fs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Day14-1.fs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///home/users/may/Documents/WebVis/AdventOfCode/MIkE/Program.fs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Day9-2.fs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/CDCCF319-ADEC-8BDF-2295-52FABDB408CF/3/seq.fs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Day14-2.fs" root0="FORCE_HIGHLIGHTING" />
@@ -105,9 +101,9 @@
         <option value="$PROJECT_DIR$/AoC-Mike.fsproj" />
         <option value="$PROJECT_DIR$/Helpers.fs" />
         <option value="$PROJECT_DIR$/Inputs/Day15.txt" />
-        <option value="$PROJECT_DIR$/TestProject/Test-Day15.fs" />
         <option value="$PROJECT_DIR$/Day15.fs" />
         <option value="$PROJECT_DIR$/Program.fs" />
+        <option value="$PROJECT_DIR$/TestProject/Test-Day15.fs" />
       </list>
     </option>
   </component>
@@ -209,7 +205,7 @@
       <workItem from="1607673779982" duration="14654000" />
       <workItem from="1607885034441" duration="14484000" />
       <workItem from="1607932975362" duration="8168000" />
-      <workItem from="1607954552672" duration="7793000" />
+      <workItem from="1607954552672" duration="9169000" />
     </task>
     <task id="LOCAL-00001" summary="Day1">
       <created>1606847743536</created>
@@ -393,7 +389,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607939207488</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="Day 15 Puzzle 1">
+      <created>1608019555264</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1608019555264</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -413,7 +416,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="Day2 and Railway Oriented Programming" />
     <MESSAGE value="Day3" />
     <MESSAGE value="More error reports and less exceptions!!" />
     <MESSAGE value="some cleanup" />
@@ -438,7 +440,8 @@
     <MESSAGE value="Day13 Puzzle1" />
     <MESSAGE value="Day14 Puzzle 1" />
     <MESSAGE value="Day14 Puzzle 2" />
-    <option name="LAST_COMMIT_MESSAGE" value="Day14 Puzzle 2" />
+    <MESSAGE value="Day 15 Puzzle 1" />
+    <option name="LAST_COMMIT_MESSAGE" value="Day 15 Puzzle 1" />
   </component>
   <component name="WindowStateProjectService">
     <state width="531" height="525" key="DebuggerActiveHint" timestamp="1607901579353">
@@ -553,6 +556,10 @@
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2321" y="155" width="800" height="537" key="Rider.ProjectTemplateDialog.Size/0.27.1920.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1607440468279" />
+    <state x="2593" y="220" width="564" height="647" key="RollbackChangesDialog" timestamp="1608019539560">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2593" y="220" width="564" height="647" key="RollbackChangesDialog/0.27.1920.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1608019539560" />
     <state x="2369" y="175" width="1022" height="737" key="SettingsEditor" timestamp="1607959342001">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
