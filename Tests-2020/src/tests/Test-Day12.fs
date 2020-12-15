@@ -19,7 +19,7 @@ let ``Test Day 12/1 Test`` () =
 [<Fact>]
 let ``Test Day 12/1 Final`` () =
     
-    Ok 1631 =! (readLines "Inputs/Day12.txt"
+    Ok 1631 =! (readLines "../inputs/Day12.txt"
                 |> Result.map (
                            Seq.map Day12_1.parseNavInst
                            >> Seq.fold (fun state navInst -> Day12_1.processInstruction state navInst) Day12_1.initState
@@ -37,7 +37,7 @@ let ``Test Day 12/2 Test`` () =
 [<Fact>]
 let ``Test Day 12/2 Final`` () =
     
-    Ok 58606 =! (readLines "Inputs/Day12.txt"
+    Ok 58606 =! (readLines "../inputs/Day12.txt"
                  |> Result.map (
                            Seq.map Day12_1.parseNavInst
                            >> Seq.fold (fun state navInst -> Day12_2.processInstruction state navInst) Day12_2.initState

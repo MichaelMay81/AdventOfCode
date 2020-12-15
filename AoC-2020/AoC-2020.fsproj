@@ -1,0 +1,58 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <TargetFramework>net5.0</TargetFramework>
+        <RootNamespace>AoC_Mike</RootNamespace>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <Compile Include="src/Helpers.fs" />
+        <Compile Include="src/days/Day1.fs" />
+        <Compile Include="src/days/Day2.fs" />
+        <Compile Include="src/days/Day3.fs" />
+        <Compile Include="src/days/Day4-1.fs" />
+        <Compile Include="src/days/Day4-2.fs" />
+        <Compile Include="src/days/Day5.fs" />
+        <Compile Include="src/days/Day6.fs" />
+        <Compile Include="src/days/Day7.fs" />
+        <Compile Include="src/days/Day8-1.fs" />
+        <Compile Include="src/days/Day8-2.fs" />
+        <Compile Include="src/days/Day9-1.fs" />
+        <Compile Include="src/days/Day9-2.fs" />
+        <Compile Include="src/days/Day10-1.fs" />
+        <Compile Include="src/days/Day10-2.fs" />
+        <Compile Include="src/days/Day11.fs" />
+        <Compile Include="src/days/Day12-1.fs" />
+        <Compile Include="src/days/Day12-2.fs" />
+        <Compile Include="src/days/Day13.fs" />
+        <Compile Include="src/days/Day14-1.fs" />
+        <Compile Include="src/days/Day14-2.fs" />
+        <Compile Include="src/days/Day15.fs" />
+        <Compile Include="src/Program.fs" />
+        <Content Include="inputs\Day1.txt" />
+        <Content Include="inputs\Day2.txt" />
+        <Content Include="inputs\Day3.txt" />
+        <Content Include="inputs\Day4.txt" />
+        <Content Include="inputs\Day5.txt" />
+        <Content Include="inputs\Day6.txt" />
+        <Content Include="inputs\Day7.txt" />
+        <Content Include="inputs\Day8.txt" />
+        <Content Include="inputs\Day9.txt" />
+        <Content Include="inputs\Day10.txt" />
+        <Content Include="inputs\Day11.txt" />
+        <Content Include="inputs\Day12.txt" />
+        <Content Include="inputs\Day13.txt" />
+        <Content Include="inputs\Day14.txt" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="FSharpPlus" Version="1.2.0-CI01665" />
+      <PackageReference Include="Unquote" Version="5.0.0" />
+    </ItemGroup>
+
+    <Target Name="FSharpLint" AfterTargets="BeforeBuild">
+        <Exec Command="dotnet fsharplint -f msbuild lint --lint-config $(MSBuildThisFileDirectory)/fsharplint.json $(MSBuildProjectFullPath)" ConsoleToMsBuild="true" IgnoreExitCode="true" />
+    </Target>
+
+</Project>

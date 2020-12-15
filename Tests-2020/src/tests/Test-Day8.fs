@@ -17,7 +17,7 @@ let ``Test Day 8/1 Test`` () =
 
 [<Fact>]
 let ``Test Day 8/1 Final`` () =
-    Error 1521 =! (readLines "Inputs/Day8.txt"
+    Error 1521 =! (readLines "../inputs/Day8.txt"
                |> function
                   | Error _ -> Ok 0
                   | Ok input -> input |> Day8_1.puzzle)
@@ -28,7 +28,7 @@ let ``Test Day 8/2 Test`` () =
     
 [<Fact>]
 let ``Test Day 8/2 Final`` () =
-    Ok 1016 =! (readLines "Inputs/Day8.txt"
+    Ok 1016 =! (readLines "../inputs/Day8.txt"
                |> function
                   | Error _ -> Ok 0
                   | Ok input -> input |> Day8_2.puzzle)

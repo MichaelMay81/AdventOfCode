@@ -1,8 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "AoC-Mike", "AoC-Mike.fsproj", "{554EA714-5812-4DB1-A87F-E6E08E934B16}"
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "AoC-2020", "AoC-2020\AoC-2020.fsproj", "{554EA714-5812-4DB1-A87F-E6E08E934B16}"
 EndProject
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "TestProject", "TestProject\TestProject.fsproj", "{CF002A34-0473-4C04-B7EE-68650565FC6A}"
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Tests-2020", "Tests-2020\Tests-2020.fsproj", "{CF002A34-0473-4C04-B7EE-68650565FC6A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -9,16 +9,16 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <Compile Include="Test-Day7.fs" />
-        <Compile Include="Test-Day8.fs" />
-        <Compile Include="Test-Day9.fs" />
-        <Compile Include="Test-Day10.fs" />
-        <Compile Include="Test-Day11.fs" />
-        <Compile Include="Test-Day12.fs" />
-        <Compile Include="Test-Day13.fs" />
-        <Compile Include="Test-Day14.fs" />
-        <Compile Include="Test-Day15.fs" />
-        <Compile Include="Program.fs" />
+        <Compile Include="src\tests\Test-Day7.fs" />
+        <Compile Include="src\tests\Test-Day8.fs" />
+        <Compile Include="src\tests\Test-Day9.fs" />
+        <Compile Include="src\tests\Test-Day10.fs" />
+        <Compile Include="src\tests\Test-Day11.fs" />
+        <Compile Include="src\tests\Test-Day12.fs" />
+        <Compile Include="src\tests\Test-Day13.fs" />
+        <Compile Include="src\tests\Test-Day14.fs" />
+        <Compile Include="src\tests\Test-Day15.fs" />
+        <Compile Include="src\Program.fs" />
     </ItemGroup>
 
     <ItemGroup>
@@ -36,7 +36,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\AoC-Mike.fsproj" />
+      <ProjectReference Include="..\AoC-2020\AoC-2020.fsproj" />
     </ItemGroup>
 
 </Project>

@@ -129,5 +129,5 @@ let ``Test Day 11/1 Test6`` () =
     
 [<Fact>]
 let ``Test Day 11/1 Final`` () =
-    Ok 2211 =! (readLines "Inputs/Day11.txt"
+    Ok 2211 =! (readLines "../inputs/Day11.txt"
                 |> Result.map Day11.puzzle1)

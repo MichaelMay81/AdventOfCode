@@ -86,7 +86,7 @@ let ``Test Day 9 checkXMAS2 Test5`` () =
 [<Fact>]
 let ``Test Day 9/1 Final`` () =
     let preambleSize = 25
-    Ok 15690279L =! (readLines "Inputs/Day9.txt" |> Result.bind (Day9_1.puzzle preambleSize))
+    Ok 15690279L =! (readLines "../inputs/Day9.txt" |> Result.bind (Day9_1.puzzle preambleSize))
 
 [<Fact>]
 let ``Test Day 9/2 Test`` () =
@@ -97,4 +97,4 @@ let ``Test Day 9/2 Test`` () =
 [<Fact>]
 let ``Test Day 9/2 Final`` () =
     let invNumber = 15690279L
-    Ok 2174232L  =! (readLines "Inputs/Day9.txt" |> Result.map (Day9_2.puzzle invNumber))
+    Ok 2174232L  =! (readLines "../inputs/Day9.txt" |> Result.map (Day9_2.puzzle invNumber))

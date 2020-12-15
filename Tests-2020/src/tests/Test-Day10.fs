@@ -21,7 +21,7 @@ let ``Test Day 10/1 Test2`` () =
 
 [<Fact>]
 let ``Test Day 10/1 Final`` () =
-    Ok 2400 =! (readLines "Inputs/Day10.txt"
+    Ok 2400 =! (readLines "../inputs/Day10.txt"
                |> Result.map Day10_1.puzzle)
     
 [<Fact>]
@@ -59,5 +59,5 @@ let ``Test Day 10/2 Test3`` () =
 
 [<Fact>]
 let ``Test Day 10/2 Final`` () =
-    Ok 338510590509056L =! (readLines "Inputs/Day10.txt"
+    Ok 338510590509056L =! (readLines "../inputs/Day10.txt"
                 |> Result.map Day10_2.puzzle)
