@@ -19,49 +19,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6c6a4c35-d00c-4c83-a840-e92a283c4033" name="Default Changelist" comment="Day 11 Puzzle 1">
-      <change afterPath="$PROJECT_DIR$/Tests-2020/src/tests/Test-Day1.fs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Tests-2020/src/tests/Test-Day2.fs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Tests-2020/src/tests/Test-Day3.fs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Tests-2020/src/tests/Test-Day4.fs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Tests-2020/src/tests/Test-Day5.fs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Tests-2020/src/tests/Test-Day6.fs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AoC-2020/inputs/Day16.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AoC-2020/src/days/Day16.fs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tests-2020/src/tests/Test-Day16.fs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.AoC-Mike/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AoC-Mike/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.AoC-Mike/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AoC-Mike/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AoC-2020/AoC-2020.fsproj" beforeDir="false" afterPath="$PROJECT_DIR$/AoC-2020/AoC-2020.fsproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AoC-2020/fsharplint.json" beforeDir="false" afterPath="$PROJECT_DIR$/AoC-2020/fsharplint.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AoC-2020/src/Helpers.fs" beforeDir="false" afterPath="$PROJECT_DIR$/AoC-2020/src/Helpers.fs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AoC-2020/src/Program.fs" beforeDir="false" afterPath="$PROJECT_DIR$/AoC-2020/src/Program.fs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AoC-2020/src/days/Day1.fs" beforeDir="false" afterPath="$PROJECT_DIR$/AoC-2020/src/days/Day1.fs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AoC-2020/src/days/Day10-1.fs" beforeDir="false" afterPath="$PROJECT_DIR$/AoC-2020/src/days/Day10-1.fs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AoC-2020/src/days/Day10-2.fs" beforeDir="false" afterPath="$PROJECT_DIR$/AoC-2020/src/days/Day10-2.fs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AoC-2020/src/days/Day11.fs" beforeDir="false" afterPath="$PROJECT_DIR$/AoC-2020/src/days/Day11.fs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AoC-2020/src/days/Day12-1.fs" beforeDir="false" afterPath="$PROJECT_DIR$/AoC-2020/src/days/Day12-1.fs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AoC-2020/src/days/Day12-2.fs" beforeDir="false" afterPath="$PROJECT_DIR$/AoC-2020/src/days/Day12-2.fs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AoC-2020/src/days/Day13.fs" beforeDir="false" afterPath="$PROJECT_DIR$/AoC-2020/src/days/Day13.fs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AoC-2020/src/days/Day14-1.fs" beforeDir="false" afterPath="$PROJECT_DIR$/AoC-2020/src/days/Day14-1.fs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AoC-2020/src/days/Day14-2.fs" beforeDir="false" afterPath="$PROJECT_DIR$/AoC-2020/src/days/Day14-2.fs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AoC-2020/src/days/Day15.fs" beforeDir="false" afterPath="$PROJECT_DIR$/AoC-2020/src/days/Day15.fs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AoC-2020/src/days/Day2.fs" beforeDir="false" afterPath="$PROJECT_DIR$/AoC-2020/src/days/Day2.fs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AoC-2020/src/days/Day3.fs" beforeDir="false" afterPath="$PROJECT_DIR$/AoC-2020/src/days/Day3.fs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AoC-2020/src/days/Day4-1.fs" beforeDir="false" afterPath="$PROJECT_DIR$/AoC-2020/src/days/Day4-1.fs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AoC-2020/src/days/Day4-2.fs" beforeDir="false" afterPath="$PROJECT_DIR$/AoC-2020/src/days/Day4-2.fs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AoC-2020/src/days/Day5.fs" beforeDir="false" afterPath="$PROJECT_DIR$/AoC-2020/src/days/Day5.fs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AoC-2020/src/days/Day6.fs" beforeDir="false" afterPath="$PROJECT_DIR$/AoC-2020/src/days/Day6.fs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AoC-2020/src/days/Day7.fs" beforeDir="false" afterPath="$PROJECT_DIR$/AoC-2020/src/days/Day7.fs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AoC-2020/src/days/Day8-1.fs" beforeDir="false" afterPath="$PROJECT_DIR$/AoC-2020/src/days/Day8-1.fs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AoC-2020/src/days/Day8-2.fs" beforeDir="false" afterPath="$PROJECT_DIR$/AoC-2020/src/days/Day8-2.fs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AoC-2020/src/days/Day9-1.fs" beforeDir="false" afterPath="$PROJECT_DIR$/AoC-2020/src/days/Day9-1.fs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AoC-2020/src/days/Day9-2.fs" beforeDir="false" afterPath="$PROJECT_DIR$/AoC-2020/src/days/Day9-2.fs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Tests-2020/Tests-2020.fsproj" beforeDir="false" afterPath="$PROJECT_DIR$/Tests-2020/Tests-2020.fsproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests-2020/src/tests/Test-Day10.fs" beforeDir="false" afterPath="$PROJECT_DIR$/Tests-2020/src/tests/Test-Day10.fs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests-2020/src/tests/Test-Day11.fs" beforeDir="false" afterPath="$PROJECT_DIR$/Tests-2020/src/tests/Test-Day11.fs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests-2020/src/tests/Test-Day12.fs" beforeDir="false" afterPath="$PROJECT_DIR$/Tests-2020/src/tests/Test-Day12.fs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests-2020/src/tests/Test-Day13.fs" beforeDir="false" afterPath="$PROJECT_DIR$/Tests-2020/src/tests/Test-Day13.fs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests-2020/src/tests/Test-Day14.fs" beforeDir="false" afterPath="$PROJECT_DIR$/Tests-2020/src/tests/Test-Day14.fs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests-2020/src/tests/Test-Day15.fs" beforeDir="false" afterPath="$PROJECT_DIR$/Tests-2020/src/tests/Test-Day15.fs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests-2020/src/tests/Test-Day7.fs" beforeDir="false" afterPath="$PROJECT_DIR$/Tests-2020/src/tests/Test-Day7.fs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests-2020/src/tests/Test-Day8.fs" beforeDir="false" afterPath="$PROJECT_DIR$/Tests-2020/src/tests/Test-Day8.fs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests-2020/src/tests/Test-Day9.fs" beforeDir="false" afterPath="$PROJECT_DIR$/Tests-2020/src/tests/Test-Day9.fs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,9 +38,6 @@
         <option value="JSON File" />
       </list>
     </option>
-  </component>
-  <component name="Git.Pull.Settings">
-    <option name="BRANCH" value="master" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -122,6 +83,9 @@
       <option value="$PROJECT_DIR$/Tests-2020/src/tests/Test-Day3.fs" />
       <option value="$PROJECT_DIR$/Tests-2020/src/tests/Test-Day2.fs" />
       <option value="$PROJECT_DIR$/Tests-2020/src/tests/Test-Day4.fs" />
+      <option value="$PROJECT_DIR$/AoC-2020/inputs/Day16.txt" />
+      <option value="$PROJECT_DIR$/AoC-2020/src/days/Day16.fs" />
+      <option value="$PROJECT_DIR$/Tests-2020/src/tests/Test-Day16.fs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1l2eVCqkcmZvcmwPgnp6b21osxR" />
@@ -132,7 +96,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="DebuggerViewTab_PTCS_FirstProportionKey" value="0.31578946" />
-    <property name="DebuggerViewTab_PTCS_LastProportionKey" value="0.30005425" />
+    <property name="DebuggerViewTab_PTCS_LastProportionKey" value="0.0" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -265,7 +229,7 @@
       <workItem from="1608026247092" duration="287000" />
       <workItem from="1608027066957" duration="135000" />
       <workItem from="1608027387906" duration="38000" />
-      <workItem from="1608027766753" duration="9556000" />
+      <workItem from="1608027766753" duration="17735000" />
     </task>
     <task id="LOCAL-00001" summary="Day1">
       <created>1606847743536</created>
@@ -470,7 +434,14 @@
       <option name="project" value="LOCAL" />
       <updated>1608035153281</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="Some changes suggested by FSharpList and moved old tests from main to test solution">
+      <created>1608042873420</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1608042873420</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -490,7 +461,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="some cleanup" />
     <MESSAGE value="Switch own getNth to tryHead and tryItem," />
     <MESSAGE value="Day4 Puzzle1" />
     <MESSAGE value="Day4 Puzzle2 but it gives to low a number :(" />
@@ -515,6 +485,27 @@
     <MESSAGE value="Day 15 Puzzle 1" />
     <MESSAGE value="Day 15 Puzzle 2, and fsharplint.json (for fsharplint, which was added last commit)" />
     <MESSAGE value="Some file hierarchy cleanup" />
-    <option name="LAST_COMMIT_MESSAGE" value="Some file hierarchy cleanup" />
+    <MESSAGE value="Some changes suggested by FSharpList and moved old tests from main to test solution" />
+    <option name="LAST_COMMIT_MESSAGE" value="Some changes suggested by FSharpList and moved old tests from main to test solution" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/AoC-2020/src/days/Day16.fs</url>
+          <line>61</line>
+          <properties documentPath="$PROJECT_DIR$/AoC-2020/src/days/Day16.fs" initialLine="60" isMultiMethodBreakpoint="true">
+            <option name="multiMethodBreakpoint" value="true" />
+            <startOffsets>
+              <option value="2087" />
+            </startOffsets>
+            <endOffsets>
+              <option value="2104" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
