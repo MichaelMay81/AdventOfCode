@@ -19,13 +19,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6c6a4c35-d00c-4c83-a840-e92a283c4033" name="Default Changelist" comment="Day 11 Puzzle 1">
-      <change afterPath="$PROJECT_DIR$/AoC-2020/inputs/Day16.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AoC-2020/src/days/Day16.fs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Tests-2020/src/tests/Test-Day16.fs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AoC-2020/src/days/Day16-2.fs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.AoC-Mike/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AoC-Mike/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.AoC-Mike/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AoC-Mike/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AoC-2020/AoC-2020.fsproj" beforeDir="false" afterPath="$PROJECT_DIR$/AoC-2020/AoC-2020.fsproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests-2020/Tests-2020.fsproj" beforeDir="false" afterPath="$PROJECT_DIR$/Tests-2020/Tests-2020.fsproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AoC-2020/src/days/Day16.fs" beforeDir="false" afterPath="$PROJECT_DIR$/AoC-2020/src/days/Day16-1.fs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests-2020/src/tests/Test-Day16.fs" beforeDir="false" afterPath="$PROJECT_DIR$/Tests-2020/src/tests/Test-Day16.fs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,6 +84,8 @@
       <option value="$PROJECT_DIR$/Tests-2020/src/tests/Test-Day4.fs" />
       <option value="$PROJECT_DIR$/AoC-2020/inputs/Day16.txt" />
       <option value="$PROJECT_DIR$/AoC-2020/src/days/Day16.fs" />
+      <option value="$PROJECT_DIR$/AoC-2020/src/days/Day16-1.fs" />
+      <option value="$PROJECT_DIR$/AoC-2020/src/days/Day16-2.fs" />
       <option value="$PROJECT_DIR$/Tests-2020/src/tests/Test-Day16.fs" />
     </changedPaths>
   </component>
@@ -229,7 +230,7 @@
       <workItem from="1608026247092" duration="287000" />
       <workItem from="1608027066957" duration="135000" />
       <workItem from="1608027387906" duration="38000" />
-      <workItem from="1608027766753" duration="17735000" />
+      <workItem from="1608027766753" duration="25729000" />
     </task>
     <task id="LOCAL-00001" summary="Day1">
       <created>1606847743536</created>
@@ -441,7 +442,14 @@
       <option name="project" value="LOCAL" />
       <updated>1608042873420</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="Day 16 Puzzle 1">
+      <created>1608112305452</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1608112305452</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -461,7 +469,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="Switch own getNth to tryHead and tryItem," />
     <MESSAGE value="Day4 Puzzle1" />
     <MESSAGE value="Day4 Puzzle2 but it gives to low a number :(" />
     <MESSAGE value="Day4 Puzzle2 Bugfixes, now get the right answer" />
@@ -486,21 +493,22 @@
     <MESSAGE value="Day 15 Puzzle 2, and fsharplint.json (for fsharplint, which was added last commit)" />
     <MESSAGE value="Some file hierarchy cleanup" />
     <MESSAGE value="Some changes suggested by FSharpList and moved old tests from main to test solution" />
-    <option name="LAST_COMMIT_MESSAGE" value="Some changes suggested by FSharpList and moved old tests from main to test solution" />
+    <MESSAGE value="Day 16 Puzzle 1" />
+    <option name="LAST_COMMIT_MESSAGE" value="Day 16 Puzzle 1" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/AoC-2020/src/days/Day16.fs</url>
+          <url>file://$PROJECT_DIR$/AoC-2020/src/days/Day16-1.fs</url>
           <line>61</line>
           <properties documentPath="$PROJECT_DIR$/AoC-2020/src/days/Day16.fs" initialLine="60" isMultiMethodBreakpoint="true">
             <option name="multiMethodBreakpoint" value="true" />
             <startOffsets>
-              <option value="2087" />
+              <option value="2027" />
             </startOffsets>
             <endOffsets>
-              <option value="2104" />
+              <option value="2037" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="2" />

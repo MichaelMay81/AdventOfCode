@@ -1,4 +1,4 @@
-module AoC2020.Day16
+module AoC2020.Day16_1
 
 open FSharpPlus
 
@@ -52,11 +52,11 @@ let ruleApplies (field:int) (rule:Rule) =
     || (field >= rule2.Min
         && field <= rule2.Max)
     
-let puzzle1 (input:string seq) : int =
+let puzzle (input:string seq) : int =
     let state = input |> parse
     
-    let foobar = state.NearbyTickets
-                    |> Seq.concat
-                    |> Seq.filter (fun f -> state.Rules |> Seq.forall (ruleApplies f >> not))
-                    |> Seq.toList
-    foobar |> Seq.sum
+    state.NearbyTickets
+    |> Seq.concat
+    |> Seq.filter (fun f -> state.Rules |> Seq.forall (ruleApplies f >> not))
+    |> Seq.toList
+    |> Seq.sum

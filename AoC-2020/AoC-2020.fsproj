@@ -29,7 +29,8 @@
         <Compile Include="src/days/Day14-1.fs" />
         <Compile Include="src/days/Day14-2.fs" />
         <Compile Include="src/days/Day15.fs" />
-        <Compile Include="src\days\Day16.fs" />
+        <Compile Include="src\days\Day16-1.fs" />
+        <Compile Include="src\days\Day16-2.fs" />
         <Compile Include="src/Program.fs" />
         <Content Include="inputs\Day1.txt" />
         <Content Include="inputs\Day2.txt" />
