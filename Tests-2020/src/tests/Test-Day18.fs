@@ -14,7 +14,6 @@ let input4 = "5 + (8 * 3 + 9 + 3 * 4 * 3)"
 let input5 = "5 * 9 * (7 * 3 * 3 + 9 * 3 + (8 + 6 * 4))"
 let input6 = "((2 + 4 * 9) * (6 + 9 * 8 + 6) + 6) + 2 + 4 * 2"
 
-
 [<Fact>]
 let ``Puzzle 1, Test1`` () =
      71L =! (input1 |> Seq.filter ((<>) ' ') |> Seq.toList |> Day18.parseAndEvaluate)
@@ -42,4 +41,32 @@ let ``Puzzle 1, Test6`` () =
 [<Fact>]
 let ``Puzzle 1, Finale`` () =
      Ok 21022630974613L =! (readLines "../inputs/Day18.txt" |> Result.map Day18.puzzle1)
+     
+[<Fact>]
+let ``Puzzle 2, Test1`` () =
+     231L =! (input1 |> Seq.filter ((<>) ' ') |> Seq.toList |> Day18.parseAndEvaluate2)
+
+[<Fact>]
+let ``Puzzle 2, Test2`` () =
+     51L =! (input2 |> Seq.filter ((<>) ' ') |> Seq.toList |> Day18.parseAndEvaluate2)
+
+[<Fact>]
+let ``Puzzle 2, Test3`` () =
+     46L =! (input3 |> Seq.filter ((<>) ' ') |> Seq.toList |> Day18.parseAndEvaluate2)
+
+[<Fact>]
+let ``Puzzle 2, Test4`` () =
+     1445L =! (input4 |> Seq.filter ((<>) ' ') |> Seq.toList |> Day18.parseAndEvaluate2)
+
+[<Fact>]
+let ``Puzzle 2, Test5`` () =
+     669060L =! (input5 |> Seq.filter ((<>) ' ') |> Seq.toList |> Day18.parseAndEvaluate2)
+
+[<Fact>]
+let ``Puzzle 2, Test6`` () =
+     23340L =! (input6 |> Seq.filter ((<>) ' ') |> Seq.toList |> Day18.parseAndEvaluate2)
+     
+[<Fact>]
+let ``Puzzle 2, Finale`` () =
+     Ok 169899524778212L =! (readLines "../inputs/Day18.txt" |> Result.map Day18.puzzle2)
      
