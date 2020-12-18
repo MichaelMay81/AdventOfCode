@@ -33,6 +33,7 @@
         <Compile Include="src\days\Day16-2.fs" />
         <Compile Include="src\days\Day17-1.fs" />
         <Compile Include="src\days\Day17-2.fs" />
+        <Compile Include="src\days\Day18.fs" />
         <Compile Include="src/Program.fs" />
         <Content Include="inputs\Day1.txt" />
         <Content Include="inputs\Day2.txt" />
@@ -49,6 +50,7 @@
         <Content Include="inputs\Day13.txt" />
         <Content Include="inputs\Day14.txt" />
         <Content Include="inputs\Day16.txt" />
+        <Content Include="inputs\Day18.txt" />
         <Content Include="fsharplint.json" />
     </ItemGroup>
 

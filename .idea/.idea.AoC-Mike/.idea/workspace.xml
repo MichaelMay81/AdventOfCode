@@ -19,9 +19,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6c6a4c35-d00c-4c83-a840-e92a283c4033" name="Default Changelist" comment="Day 11 Puzzle 1">
-      <change afterPath="$PROJECT_DIR$/AoC-2020/src/days/Day17-1.fs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AoC-2020/src/days/Day17-2.fs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Tests-2020/src/tests/Test-Day17.fs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AoC-2020/inputs/Day18.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AoC-2020/src/days/Day18.fs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tests-2020/src/tests/Test-Day18.fs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.AoC-Mike/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AoC-Mike/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.AoC-Mike/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AoC-Mike/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AoC-2020/AoC-2020.fsproj" beforeDir="false" afterPath="$PROJECT_DIR$/AoC-2020/AoC-2020.fsproj" afterDir="false" />
@@ -44,7 +44,6 @@
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
-      <option value="$PROJECT_DIR$/AoC-2020/src/days/Day15.fs" />
       <option value="$PROJECT_DIR$/AoC-2020/src/days/Day14-2.fs" />
       <option value="$PROJECT_DIR$/AoC-2020/src/days/Day14-1.fs" />
       <option value="$PROJECT_DIR$/AoC-2020/src/days/Day12-2.fs" />
@@ -93,6 +92,9 @@
       <option value="$PROJECT_DIR$/AoC-2020/src/days/Day17-1.fs" />
       <option value="$PROJECT_DIR$/AoC-2020/src/days/Day17-2.fs" />
       <option value="$PROJECT_DIR$/Tests-2020/src/tests/Test-Day17.fs" />
+      <option value="$PROJECT_DIR$/AoC-2020/inputs/Day18.txt" />
+      <option value="$PROJECT_DIR$/AoC-2020/src/days/Day18.fs" />
+      <option value="$PROJECT_DIR$/Tests-2020/src/tests/Test-Day18.fs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1l2eVCqkcmZvcmwPgnp6b21osxR" />
@@ -102,12 +104,11 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="DebuggerViewTab_PTCS_FirstProportionKey" value="0.31633207" />
+    <property name="DebuggerViewTab_PTCS_FirstProportionKey" value="0.31677705" />
     <property name="DebuggerViewTab_PTCS_LastProportionKey" value="0.0" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="XThreadsFramesViewSplitterKey" value="0.55421686" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/AoC-2020/fsharplint.json" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -237,7 +238,7 @@
       <workItem from="1608027066957" duration="135000" />
       <workItem from="1608027387906" duration="38000" />
       <workItem from="1608027766753" duration="42618000" />
-      <workItem from="1608279157030" duration="683000" />
+      <workItem from="1608279157030" duration="4313000" />
     </task>
     <task id="LOCAL-00001" summary="Day1">
       <created>1606847743536</created>
@@ -463,7 +464,14 @@
       <option name="project" value="LOCAL" />
       <updated>1608128783256</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="Day17">
+      <created>1608279920331</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1608279920332</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -483,7 +491,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="Day4 Puzzle2 but it gives to low a number :(" />
     <MESSAGE value="Day4 Puzzle2 Bugfixes, now get the right answer" />
     <MESSAGE value="Day5" />
     <MESSAGE value="Day7" />
@@ -508,7 +515,8 @@
     <MESSAGE value="Some changes suggested by FSharpList and moved old tests from main to test solution" />
     <MESSAGE value="Day 16 Puzzle 1" />
     <MESSAGE value="Day 16 Puzzle 2" />
-    <option name="LAST_COMMIT_MESSAGE" value="Day 16 Puzzle 2" />
+    <MESSAGE value="Day17" />
+    <option name="LAST_COMMIT_MESSAGE" value="Day17" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -520,6 +528,20 @@
             <option name="multiMethodBreakpoint" value="true" />
           </properties>
           <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/AoC-2020/src/days/Day18.fs</url>
+          <line>6</line>
+          <properties documentPath="$PROJECT_DIR$/AoC-2020/src/days/Day18.fs" initialLine="6" isMultiMethodBreakpoint="true">
+            <option name="multiMethodBreakpoint" value="true" />
+            <startOffsets>
+              <option value="227" />
+            </startOffsets>
+            <endOffsets>
+              <option value="243" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="19" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

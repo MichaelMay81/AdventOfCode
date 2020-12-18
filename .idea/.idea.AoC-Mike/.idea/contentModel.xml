@@ -19,6 +19,7 @@
           <e p="Day13.txt" t="Include" />
           <e p="Day14.txt" t="Include" />
           <e p="Day16.txt" t="Include" />
+          <e p="Day18.txt" t="Include" />
           <e p="Day2.txt" t="Include" />
           <e p="Day3.txt" t="Include" />
           <e p="Day4.txt" t="Include" />
@@ -47,6 +48,7 @@
             <e p="Day16-2.fs" t="Include" />
             <e p="Day17-1.fs" t="Include" />
             <e p="Day17-2.fs" t="Include" />
+            <e p="Day18.fs" t="Include" />
             <e p="Day2.fs" t="Include" />
             <e p="Day3.fs" t="Include" />
             <e p="Day4-1.fs" t="Include" />
@@ -79,6 +81,7 @@
             <e p="Test-Day15.fs" t="Include" />
             <e p="Test-Day16.fs" t="Include" />
             <e p="Test-Day17.fs" t="Include" />
+            <e p="Test-Day18.fs" t="Include" />
             <e p="Test-Day2.fs" t="Include" />
             <e p="Test-Day3.fs" t="Include" />
             <e p="Test-Day4.fs" t="Include" />
