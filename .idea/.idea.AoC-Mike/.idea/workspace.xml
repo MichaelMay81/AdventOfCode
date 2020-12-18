@@ -20,8 +20,12 @@
   <component name="ChangeListManager">
     <list default="true" id="6c6a4c35-d00c-4c83-a840-e92a283c4033" name="Default Changelist" comment="Day 11 Puzzle 1">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.AoC-Mike/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AoC-Mike/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AoC-2020/fsharplint.json" beforeDir="false" afterPath="$PROJECT_DIR$/AoC-2020/fsharplint.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AoC-2020/src/days/Day16-1.fs" beforeDir="false" afterPath="$PROJECT_DIR$/AoC-2020/src/days/Day16-1.fs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AoC-2020/src/days/Day16-2.fs" beforeDir="false" afterPath="$PROJECT_DIR$/AoC-2020/src/days/Day16-2.fs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AoC-2020/src/days/Day17-1.fs" beforeDir="false" afterPath="$PROJECT_DIR$/AoC-2020/src/days/Day17-1.fs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AoC-2020/src/days/Day17-2.fs" beforeDir="false" afterPath="$PROJECT_DIR$/AoC-2020/src/days/Day17-2.fs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AoC-2020/src/days/Day18.fs" beforeDir="false" afterPath="$PROJECT_DIR$/AoC-2020/src/days/Day18.fs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests-2020/src/tests/Test-Day18.fs" beforeDir="false" afterPath="$PROJECT_DIR$/Tests-2020/src/tests/Test-Day18.fs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,9 +41,6 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
-  </component>
-  <component name="HighlightingSettingsPerFile">
-    <setting file="mock:///home/users/may/Documents/WebVis/AdventOfCode/MIkE/AoC-2020/src/days/Day18.fs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
@@ -69,7 +70,6 @@
       <option value="$PROJECT_DIR$/Tests-2020/src/tests/Test-Day10.fs" />
       <option value="$PROJECT_DIR$/AoC-2020/src/days/Day6.fs" />
       <option value="$PROJECT_DIR$/AoC-2020/src/days/Day11.fs" />
-      <option value="$PROJECT_DIR$/AoC-2020/fsharplint.json" />
       <option value="$PROJECT_DIR$/AoC-2020/src/days/Day13.fs" />
       <option value="$PROJECT_DIR$/Tests-2020/src/tests/Test-Day7.fs" />
       <option value="$PROJECT_DIR$/Tests-2020/src/tests/Test-Day8.fs" />
@@ -83,17 +83,18 @@
       <option value="$PROJECT_DIR$/Tests-2020/src/tests/Test-Day4.fs" />
       <option value="$PROJECT_DIR$/AoC-2020/inputs/Day16.txt" />
       <option value="$PROJECT_DIR$/AoC-2020/src/days/Day16.fs" />
-      <option value="$PROJECT_DIR$/AoC-2020/src/days/Day16-1.fs" />
-      <option value="$PROJECT_DIR$/AoC-2020/src/days/Day16-2.fs" />
       <option value="$PROJECT_DIR$/Tests-2020/src/tests/Test-Day16.fs" />
       <option value="$PROJECT_DIR$/Tests-2020/src/tests/Day17-2.fs" />
       <option value="$PROJECT_DIR$/AoC-2020/src/days/Day17.fs" />
-      <option value="$PROJECT_DIR$/AoC-2020/src/days/Day17-1.fs" />
-      <option value="$PROJECT_DIR$/AoC-2020/src/days/Day17-2.fs" />
       <option value="$PROJECT_DIR$/Tests-2020/src/tests/Test-Day17.fs" />
       <option value="$PROJECT_DIR$/AoC-2020/inputs/Day18.txt" />
-      <option value="$PROJECT_DIR$/AoC-2020/src/days/Day18.fs" />
       <option value="$PROJECT_DIR$/Tests-2020/src/tests/Test-Day18.fs" />
+      <option value="$PROJECT_DIR$/AoC-2020/fsharplint.json" />
+      <option value="$PROJECT_DIR$/AoC-2020/src/days/Day16-1.fs" />
+      <option value="$PROJECT_DIR$/AoC-2020/src/days/Day16-2.fs" />
+      <option value="$PROJECT_DIR$/AoC-2020/src/days/Day17-1.fs" />
+      <option value="$PROJECT_DIR$/AoC-2020/src/days/Day18.fs" />
+      <option value="$PROJECT_DIR$/AoC-2020/src/days/Day17-2.fs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1l2eVCqkcmZvcmwPgnp6b21osxR" />
@@ -237,7 +238,8 @@
       <workItem from="1608027066957" duration="135000" />
       <workItem from="1608027387906" duration="38000" />
       <workItem from="1608027766753" duration="42618000" />
-      <workItem from="1608279157030" duration="10695000" />
+      <workItem from="1608279157030" duration="10848000" />
+      <workItem from="1608293790572" duration="641000" />
     </task>
     <task id="LOCAL-00001" summary="Day1">
       <created>1606847743536</created>
@@ -477,7 +479,14 @@
       <option name="project" value="LOCAL" />
       <updated>1608283540646</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="Day18 Puzzle2">
+      <created>1608293498148</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1608293498148</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -497,7 +506,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="Day5" />
     <MESSAGE value="Day7" />
     <MESSAGE value="some refactoring of Day7 puzzle1 to prepare for puzzle2 (also Set :)" />
     <MESSAGE value="Day7 puzzle2" />
@@ -522,7 +530,8 @@
     <MESSAGE value="Day 16 Puzzle 2" />
     <MESSAGE value="Day17" />
     <MESSAGE value="Day18 Puzzle1" />
-    <option name="LAST_COMMIT_MESSAGE" value="Day18 Puzzle1" />
+    <MESSAGE value="Day18 Puzzle2" />
+    <option name="LAST_COMMIT_MESSAGE" value="Day18 Puzzle2" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -19,8 +19,7 @@ let parseAndEvaluate (input:char list) : int64 =
 
 let puzzle1 (input:string seq) : int64 =
     input
-    |> Seq.map (Seq.filter ((<>) ' ') >> Seq.toList >> parseAndEvaluate)
-    |> Seq.sum
+    |> Seq.sumBy (Seq.filter ((<>) ' ') >> Seq.toList >> parseAndEvaluate)
     
 let parseAndEvaluate2 (input:char list) : int64 =
     let inline charToInt c = int64 c - int64 '0'
@@ -49,5 +48,4 @@ let parseAndEvaluate2 (input:char list) : int64 =
 
 let puzzle2 (input:string seq) : int64 =
     input
-    |> Seq.map (Seq.filter ((<>) ' ') >> Seq.toList >> parseAndEvaluate2)
-    |> Seq.sum
+    |> Seq.sumBy (Seq.filter ((<>) ' ') >> Seq.toList >> parseAndEvaluate2)

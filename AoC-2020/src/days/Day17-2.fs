@@ -11,7 +11,7 @@ type Coordinates = {
     W: int
 } with
     static member (+) (a, b) = {X=a.X+b.X; Y=a.Y+b.Y; Z=a.Z+b.Z; W=a.W+b.W}
-    static member ofTuple (x, y, z, w) = {X=x; Y=y; Z=z; W=w}
+    static member OfTuple (x, y, z, w) = {X=x; Y=y; Z=z; W=w}
     
 type PocketDim = PocketDim of Set<Coordinates>
 module PocketDims =
@@ -34,8 +34,8 @@ let permute4times value = permute4 value value value value
 let fetchActiveNeighbours (coords:Coordinates) (pocketDim:PocketDim) =
     {-1 .. 1}
     |> permute4times
-    |> Seq.filter ((<>) (0,0,0,0))
-    |> Seq.map (Coordinates.ofTuple >> (+) coords)
+    |> Seq.filter ((<>) (0, 0, 0, 0))
+    |> Seq.map (Coordinates.OfTuple >> (+) coords)
     |> Seq.filter ((PocketDims.isActive |> flip) pocketDim)
 
 let analyseNeighbours (coordinate:Coordinates) (pocketDim:PocketDim) =
@@ -61,7 +61,7 @@ let analysePocketDim (pocketDim:PocketDim) =
         {fst rangeY - 1 .. snd rangeY + 1}
         {fst rangeZ - 1 .. snd rangeZ + 1}
         {fst rangeW - 1 .. snd rangeW + 1}
-    |> Seq.map Coordinates.ofTuple
+    |> Seq.map Coordinates.OfTuple
     |> Seq.filter (flip analyseNeighbours pocketDim)
     |> Set.ofSeq
     |> PocketDim

@@ -10,7 +10,7 @@
       }
     },
     "typePrefixing": { "enabled": false },
-    "unionDefinitionIndentation": { "enabled": true },
+    "unionDefinitionIndentation": { "enabled": false },
     "moduleDeclSpacing": { "enabled": false },
     "classMemberSpacing": { "enabled": false },
     "tupleFormatting": {

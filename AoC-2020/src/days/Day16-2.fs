@@ -25,7 +25,7 @@ let parseLine (input: string) : ParseResult option =
     else
         match input |> (trySscanf "%s: %i-%i or %i-%i") with
         | Some (name, min1, max1, min2, max2) ->
-                Some (Rule (name, ({Min=min1; Max=max1}, {Min=min2; Max=max2})))
+            Some (Rule (name, ({Min=min1; Max=max1}, {Min=min2; Max=max2})))
         | None ->
             Some (Ticket (input |> String.split [","] |> Seq.map int |> Seq.toList)) 
 
