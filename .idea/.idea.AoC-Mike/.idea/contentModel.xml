@@ -45,6 +45,8 @@
             <e p="Day15.fs" t="Include" />
             <e p="Day16-1.fs" t="Include" />
             <e p="Day16-2.fs" t="Include" />
+            <e p="Day17-1.fs" t="Include" />
+            <e p="Day17-2.fs" t="Include" />
             <e p="Day2.fs" t="Include" />
             <e p="Day3.fs" t="Include" />
             <e p="Day4-1.fs" t="Include" />
@@ -66,6 +68,7 @@
         <e p="obj" t="ExcludeRecursive" />
         <e p="src" t="Include">
           <e p="Program.fs" t="Include" />
+          <e p="days" t="Include" />
           <e p="tests" t="Include">
             <e p="Test-Day1.fs" t="Include" />
             <e p="Test-Day10.fs" t="Include" />
@@ -75,6 +78,7 @@
             <e p="Test-Day14.fs" t="Include" />
             <e p="Test-Day15.fs" t="Include" />
             <e p="Test-Day16.fs" t="Include" />
+            <e p="Test-Day17.fs" t="Include" />
             <e p="Test-Day2.fs" t="Include" />
             <e p="Test-Day3.fs" t="Include" />
             <e p="Test-Day4.fs" t="Include" />
