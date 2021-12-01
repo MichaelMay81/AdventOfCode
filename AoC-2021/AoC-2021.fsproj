@@ -1,0 +1,15 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net6.0</TargetFramework>
+    <RootNamespace>AoC_2021</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="src/Helpers.fs" />
+    <Compile Include="src/days/Day1.fs" />
+    <Compile Include="src/Program.fs" />
+  </ItemGroup>
+
+</Project>
