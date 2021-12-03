@@ -2,70 +2,69 @@ module AoC2021.Day3
 
 open System
 
-let getBinaryDigit pos number = number &&& (int(2.0**(float pos)))
+type Bit =
+| Zero
+| One
+
+let inverseBit = function | Zero -> One | One -> Zero
+let bitToInt = function | Zero -> 0 | One -> 1
+let bitsToInt =
+    Seq.map bitToInt
+    >> Seq.mapi (fun i x -> x * (int(2.0**i)))
+    >> Seq.sum
+
+let getBit pos number =
+    number &&& (int(2.0**(float pos)))
+    |> function | 0 -> Zero | _ -> One
 
 let numberOfBinaryDigits = float >> Math.Log2 >> Math.Ceiling >> int
 
-let private binaryDigitsToInt =
-    Seq.mapi (fun i x -> x * (int(2.0**i)))
-    >> Seq.sum
+let calcMostCommonBitOnPos numbers pos =
+    numbers
+    |> Seq.map (getBit pos)
+    // count zeros
+    |> Seq.filter ((=) Zero)
+    |> Seq.length
+    // return most common
+    |> (<) ((numbers |> Seq.length)/2)
+    |> function | true -> Zero | false -> One
 
-let private calcMoreZeroesThanOnesPerDigit numbers =
+let private calcMostCommonBits numbers =
     let numOfDigits = numbers |> Seq.max |> numberOfBinaryDigits
 
-    let countZeroesOnBinaryPosition numbers pos =
-        numbers
-        |> Seq.map (getBinaryDigit pos)
-        |> Seq.filter ((=) 0)
-        |> Seq.length
-    
     seq { 0 .. (numOfDigits-1) }
-    // count zeroes
-    |> Seq.map (countZeroesOnBinaryPosition numbers)
-    |> Seq.map ((<) ((numbers |> Seq.length)/2))
-
-let calcMostCommonBits (numbers:int seq) =
-    numbers
-    |> calcMoreZeroesThanOnesPerDigit
-    |> Seq.map (function | true -> 0 | false -> 1)
-    |> binaryDigitsToInt
-
-let calcLeastCommonBits (numbers:int seq) =
-    numbers
-    |> calcMoreZeroesThanOnesPerDigit
-    // more zeroes than 1s?
-    |> Seq.map (function | true -> 1 | false -> 0)
-    |> binaryDigitsToInt
+    |> Seq.map (calcMostCommonBitOnPos numbers)
 
 let puzzle1 numbers =
-    let epsilonRate = calcMostCommonBits numbers
-    let gammaRate = calcLeastCommonBits numbers
-    let powerConsumption = epsilonRate * gammaRate
+    let mostCommonBits = numbers |> calcMostCommonBits
 
-    powerConsumption
+    let epsilonRate = mostCommonBits |> bitsToInt
+    let gammaRate = mostCommonBits |> Seq.map inverseBit |> bitsToInt
+    
+    // powerConsumption
+    epsilonRate * gammaRate
 
 let puzzle2 numbers =
-    let numOfDigits = numbers |> Seq.max |> numberOfBinaryDigits
+    let rec filterPos filterFun pos values =
+        if pos < 0 then failwith "You said this couldn't happen!"
 
-    let rec filterPos filterFun pos values=
-        if pos < 0 then failwith ":("
-
-        let filterValue = filterFun values
-        let digit = getBinaryDigit pos filterValue
+        let mcb = filterFun values pos
 
         let numbersFiltered =
             values
             |> Seq.filter (fun number ->
-                    digit = getBinaryDigit pos number
-                )
+                    mcb = getBit pos number)
             |> Seq.toList
-
+        
         match numbersFiltered |> Seq.length with
-        | 0 -> failwith "You said this couldn't happen!"
         | 1 -> numbersFiltered |> Seq.head
         | _ -> filterPos filterFun (pos-1) numbersFiltered
-        
-    let oxygenGeneratorRating = filterPos calcMostCommonBits (numOfDigits-1) numbers
-    let co2ScrubberRating = filterPos calcLeastCommonBits (numOfDigits-1) numbers
+
+    let numOfDigits = numbers |> Seq.max |> numberOfBinaryDigits
+
+    let calcMCB = calcMostCommonBitOnPos
+    let calcLCB = (fun values pos -> calcMostCommonBitOnPos values pos |> inverseBit)
+    let oxygenGeneratorRating = filterPos calcMCB (numOfDigits-1) numbers
+    let co2ScrubberRating = filterPos calcLCB (numOfDigits-1) numbers
 
     oxygenGeneratorRating * co2ScrubberRating
