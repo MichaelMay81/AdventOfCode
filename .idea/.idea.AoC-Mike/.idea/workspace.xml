@@ -20,12 +20,6 @@
   <component name="ChangeListManager">
     <list default="true" id="6c6a4c35-d00c-4c83-a840-e92a283c4033" name="Default Changelist" comment="Day 11 Puzzle 1">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.AoC-Mike/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AoC-Mike/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AoC-2020/fsharplint.json" beforeDir="false" afterPath="$PROJECT_DIR$/AoC-2020/fsharplint.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AoC-2020/src/days/Day16-1.fs" beforeDir="false" afterPath="$PROJECT_DIR$/AoC-2020/src/days/Day16-1.fs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AoC-2020/src/days/Day16-2.fs" beforeDir="false" afterPath="$PROJECT_DIR$/AoC-2020/src/days/Day16-2.fs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AoC-2020/src/days/Day17-1.fs" beforeDir="false" afterPath="$PROJECT_DIR$/AoC-2020/src/days/Day17-1.fs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AoC-2020/src/days/Day17-2.fs" beforeDir="false" afterPath="$PROJECT_DIR$/AoC-2020/src/days/Day17-2.fs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AoC-2020/src/days/Day18.fs" beforeDir="false" afterPath="$PROJECT_DIR$/AoC-2020/src/days/Day18.fs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -239,7 +233,9 @@
       <workItem from="1608027387906" duration="38000" />
       <workItem from="1608027766753" duration="42618000" />
       <workItem from="1608279157030" duration="10848000" />
-      <workItem from="1608293790572" duration="641000" />
+      <workItem from="1608293790572" duration="874000" />
+      <workItem from="1608300412406" duration="24000" />
+      <workItem from="1611325822069" duration="961000" />
     </task>
     <task id="LOCAL-00001" summary="Day1">
       <created>1606847743536</created>
@@ -486,7 +482,14 @@
       <option name="project" value="LOCAL" />
       <updated>1608293498148</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="FSharpList fixes">
+      <created>1608294612117</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1608294612117</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -506,7 +509,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="Day7" />
     <MESSAGE value="some refactoring of Day7 puzzle1 to prepare for puzzle2 (also Set :)" />
     <MESSAGE value="Day7 puzzle2" />
     <MESSAGE value="Some basic unit testing with xunit and unquote" />
@@ -531,7 +533,8 @@
     <MESSAGE value="Day17" />
     <MESSAGE value="Day18 Puzzle1" />
     <MESSAGE value="Day18 Puzzle2" />
-    <option name="LAST_COMMIT_MESSAGE" value="Day18 Puzzle2" />
+    <MESSAGE value="FSharpList fixes" />
+    <option name="LAST_COMMIT_MESSAGE" value="FSharpList fixes" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

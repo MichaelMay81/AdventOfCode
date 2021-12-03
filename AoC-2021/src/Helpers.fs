@@ -42,13 +42,9 @@ let getPuzzleInputAsInt filePath =
     getPuzzleInput filePath |> Seq.map int |> Seq.toList
 
 let triplewise list =
-    let rec twRec acc list =
-        match list with
-        | [] | [_] | [_; _] -> acc
-        | x1 :: x2 :: x3 :: _ ->
-            list
-            |> List.tail
-            |> twRec (Seq.append acc (Seq.singleton (x1,x2,x3)))
-    
-    twRec Seq.empty list
-    |> Seq.toList
+    let rec twRec acc = function
+        | [] | [_] | [_; _] -> acc |> List.rev
+        | x1 :: x2 :: x3 :: tail ->
+            x2 :: x3 :: tail
+            |> twRec ((x1,x2,x3)::acc)
+    twRec [] list
