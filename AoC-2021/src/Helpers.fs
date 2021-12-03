@@ -1,6 +1,7 @@
 module AoC2021.Helpers
 
 open System.IO
+open System
 
 let tee deadEndFunction oneTrackInput =
     deadEndFunction oneTrackInput
@@ -40,6 +41,9 @@ let getPuzzleInput filePath =
 
 let getPuzzleInputAsInt filePath =
     getPuzzleInput filePath |> Seq.map int |> Seq.toList
+
+let getPuzzleInputAsBinaryInt filePath =
+    getPuzzleInput filePath |> Seq.map (fun str -> Convert.ToInt32(str, 2)) |> Seq.toList
 
 let triplewise list =
     let rec twRec acc = function
