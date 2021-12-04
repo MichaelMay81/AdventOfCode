@@ -11,6 +11,10 @@
     <Compile Include="src/days/Day2-1.fs" />
     <Compile Include="src/days/Day2-2.fs" />
     <Compile Include="src/days/Day3.fs" />
+    <Compile Include="src/days/Day4.fs" />
     <Compile Include="src/Program.fs" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="fsharpplus" Version="1.2.2" />
   </ItemGroup>
 </Project>

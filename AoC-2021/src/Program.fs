@@ -1,64 +1,30 @@
 ﻿open AoC2021
 open AoC2021.Helpers
-open Day3
+open Day4
 open System
 
 [<EntryPoint>]
 let main argv =
+    let drawnNumbers = [7;4;9;5;11;17;23;2;0;14;21;24;10;16;13;6;15;25;12;22;18;20;8;19;3;26;1]
     let input1 = [
-        0b00100 // 4
-        0b11110 // 30
-        0b10110 // 22
-        0b10111 // 23
-        0b10101 // 21
-        0b01111 // 15
-        0b00111 // 7
-        0b11100 // 28
-        0b10000 // 16
-        0b11001 // 25
-        0b00010 // 2
-        0b01010 // 10
+        [22;13;17;11;0;8;2;23;4;24;21;9;14;16;7;6;10;3;18;5;1;12;20;15;19]
+        [3;15;0;2;22;9;18;13;17;5;19;8;7;25;23;20;11;10;24;4;14;21;16;12;6]
+        [14;21;17;24;4;10;16;15;9;19;18;8;23;26;20;22;11;13;6;5;2;0;12;3;7]
     ]
 
-    let makeItSo number =
-        printfn "%A %A %A" number (Day3.numberOfBinaryDigits number) (Math.Log2 (float number))
+    // printfn "%A" (drawnNumbers[0..11])
+    // printfn "%A" (markedBoardToString input1[2] (input1[2] |> (marked drawnNumbers[0..11])))
 
-    // printfn "%A" (input1 |> List.map ((&&&) 0b10000) |> List.filter ((=) 0) |> List.length)
-    // makeItSo 0b00001 // 1
-    // makeItSo 0b00010 // 2
-    // makeItSo 0b00100 // 4
-    // makeItSo 0b01000 // 8
-    // makeItSo 0b10000 // 16
-    // makeItSo 0b00110
-    // makeItSo 0b00101
-    // makeItSo 0b00111
-    // makeItSo 0b01000
-    // makeItSo 0b10111
+    // printfn "%A" (isWinner (input1[2] |> (marked drawnNumbers[0..10])))
+    // printfn "%A" (isWinner (input1[2] |> (marked drawnNumbers[0..11])))
 
-    // printfn "foobar"
-    // printfn "%A" (uint 0b101011100101)
-    // printfn "%A" (int 0b111111111111)
-    // printfn "%A" (int 0b101011100101)
-    
-    printfn "%A" (input1 |> Day3.puzzle2)
-    // printfn "%A" (input1 |> Day3.calcLeastCommonBits)
-    // printfn "%A" (input1 |> Day3.puzzle1)
-    printfn "%A" (getPuzzleInputAsBinaryInt "../inputs/Day3.txt" |> Day3.puzzle2)
+    // printfn "%A" (puzzle1 drawnNumbers input1)
 
-    // printfn "%A" (0b00100 &&& 0b10000)
-    // printfn "%A" (0b00100 &&& 0b01000)
-    // printfn "%A" (0b00100 &&& 0b00100)
-    // printfn "%A" (0b00100 &&& 0b00010)
-    // printfn "%A" (0b00100 &&& 0b00001)
-    // printfn "%A" (input1 |> Day2_2.puzzle)
-    // printfn "%A" (getPuzzleInput "../inputs/Day2.txt" |> Day2.parseCmds |> Day2_2.puzzle)
+    //printfn "%A" (getPuzzleInput "../inputs/Day4.txt" |> parsePuzzleInput)
+    //printfn "%A" (puzzle2 drawnNumbers input1)
+    printfn "%A" (getPuzzleInput "../inputs/Day4.txt" |> parsePuzzleInput |> (fun (drawn, boards) -> puzzle2 drawn boards))
 
-    //printfn "%A" (input1 |> Day1.puzzle1)
-    //printfn "%A" (getPuzzleInputAsInt "../inputs/Day1.txt" |> Day1.puzzle1)
-    
-    //
-    //printfn "%A" (input1 |> Helpers.triplewise2)
-    //printfn "%A" (input1 |> Day1.puzzle2)
-    //printfn "%A" (getPuzzleInputAsInt "../inputs/Day1.txt" |> Day1.puzzle2)
+    // let makeItSo number =
+    //     printfn "%A %A %A" number (Day3.numberOfBinaryDigits number) (Math.Log2 (float number))
 
     0 // return an integer exit code
