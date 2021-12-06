@@ -1,30 +1,70 @@
 ﻿open AoC2021
 open AoC2021.Helpers
-open Day4
+open Day5
 open System
 
 [<EntryPoint>]
 let main argv =
-    let drawnNumbers = [7;4;9;5;11;17;23;2;0;14;21;24;10;16;13;6;15;25;12;22;18;20;8;19;3;26;1]
     let input1 = [
-        [22;13;17;11;0;8;2;23;4;24;21;9;14;16;7;6;10;3;18;5;1;12;20;15;19]
-        [3;15;0;2;22;9;18;13;17;5;19;8;7;25;23;20;11;10;24;4;14;21;16;12;6]
-        [14;21;17;24;4;10;16;15;9;19;18;8;23;26;20;22;11;13;6;5;2;0;12;3;7]
+        "0,9 -> 5,9"
+        "8,0 -> 0,8"
+        "9,4 -> 3,4"
+        "2,2 -> 2,1"
+        "7,0 -> 7,4"
+        "6,4 -> 2,0"
+        "0,9 -> 2,9"
+        "3,4 -> 1,4"
+        "0,0 -> 8,8"
+        "5,5 -> 8,2"
     ]
+    let input2 = "1,1 -> 1,3" |> parseVentLine
+    let input3 = "9,7 -> 7,7" |> parseVentLine
 
-    // printfn "%A" (drawnNumbers[0..11])
-    // printfn "%A" (markedBoardToString input1[2] (input1[2] |> (marked drawnNumbers[0..11])))
+    // printfn "%A" (input1 |> parseVentLines)
+    input1
+    |> parseVentLines
+    |> List.map (ventLineToString >> (printfn "%s"))
+    |> ignore
 
-    // printfn "%A" (isWinner (input1[2] |> (marked drawnNumbers[0..10])))
-    // printfn "%A" (isWinner (input1[2] |> (marked drawnNumbers[0..11])))
+    printf "%A: " (input2 |> ventLineToString)
+    input2
+    |> interpolateVentLine
+    |> List.map coordToString
+    |> (printfn "%A")
 
-    // printfn "%A" (puzzle1 drawnNumbers input1)
+    printf "%A: " (input3 |> ventLineToString)
+    input3
+    |> interpolateVentLine
+    |> List.map coordToString
+    |> (printfn "%A")
 
-    //printfn "%A" (getPuzzleInput "../inputs/Day4.txt" |> parsePuzzleInput)
-    //printfn "%A" (puzzle2 drawnNumbers input1)
-    printfn "%A" (getPuzzleInput "../inputs/Day4.txt" |> parsePuzzleInput |> (fun (drawn, boards) -> puzzle2 drawn boards))
+    input1
+    |> parseVentLines
+    |> puzzle1
+    // |> List.map (fun (coord, count) -> sprintf "%s: %i" (coordToString coord) count)
+    |> printfn "%A"
 
-    // let makeItSo number =
-    //     printfn "%A %A %A" number (Day3.numberOfBinaryDigits number) (Math.Log2 (float number))
+    input1
+    |> parseVentLines
+    //|> Seq.filter (fun {From={X=x1;Y=y1};To={X=x2;Y=y2}} -> (x1=x2) || (y1=y2))
+    |> createCoordMap
+    |> coordMapToString
+    |> printfn "%A"
+
+    input1
+    |> parseVentLines
+    //|> Seq.filter (fun {From={X=x1;Y=y1};To={X=x2;Y=y2}} -> (x1=x2) || (y1=y2))
+    |> createCoordMap
+    |> Seq.filter (snd >> (<) 1)
+    |> Seq.length
+    |> printfn "%i" // 5
+
+    getPuzzleInput "../inputs/Day5.txt"
+    |> parseVentLines
+    //|> Seq.filter (fun {From={X=x1;Y=y1};To={X=x2;Y=y2}} -> (x1=x2) || (y1=y2))
+    |> createCoordMap
+    |> Seq.filter (snd >> (<) 1)
+    |> Seq.length
+    |> printfn "%i" // 6856
 
     0 // return an integer exit code
