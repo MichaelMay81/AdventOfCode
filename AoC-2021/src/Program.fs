@@ -1,133 +1,60 @@
 ﻿open AoC2021
 open AoC2021.Helpers
-open Day5
-open System
+open FSharp.Collections
 
 open FSharpPlus
 
 [<EntryPoint>]
 let main argv =
-    let input1 = [16;1;2;0;4;2;7;1;2;14]
+    let input1 = "acedgfb cdfbe gcdfa fbcad dab cefabd cdfgeb eafb cagedb ab | cdfeb fcadb cdfeb cdbaf"
+    let input2 = [
+        "be cfbegad cbdgef fgaecd cgeb fdcge agebfd fecdb fabcd edb | fdgacbe cefdb cefbgd gcbe"
+        "edbfga begcd cbg gc gcadebf fbgde acbgfd abcde gfcbed gfec | fcgedb cgb dgebacf gc"
+        "fgaebd cg bdaec gdafb agbcfd gdcbef bgcad gfac gcb cdgabef | cg cg fdcagb cbg"
+        "fbegcd cbd adcefb dageb afcb bc aefdc ecdab fgdeca fcdbega | efabcd cedba gadfec cb"
+        "aecbfdg fbg gf bafeg dbefa fcge gcbea fcaegb dgceab fcbdga | gecf egdcabf bgf bfgea"
+        "fgeab ca afcebg bdacfeg cfaedg gcfdb baec bfadeg bafgc acf | gebdcfa ecba ca fadegcb"
+        "dbcfg fgd bdegcaf fgec aegbdf ecdfab fbedc dacgb gdcebf gf | cefg dcbef fcge gbcadfe"
+        "bdfegc cbegaf gecbf dfcage bdacg ed bedf ced adcbefg gebcd | ed bcgafe cdgba cbgef"
+        "egadfb cdbfeg cegd fecab cgb gbdefca cg fgcdab egfdb bfceg | gbdfcae bgc cg cgb"
+        "gcafb gcf dcaebfg ecagb gf abcdeg gaef cafbge fdbac fegbdc | fgae cfgab fg bagce"
+    ]
 
-    // (input1
-    // |> List.sum
-    // |> float)
-    // / (input1 |> List.length |> float)
-    // |> printfn "%A"
+    input2
+    |> map Day8.parse7sEntry
+    |> Day8.puzzle1
+    |> printfn "%A" // 26
 
-    // input1
-    // |> List.map (flip (-) 4 >> Math.Abs)
-    // |> List.sum
-    // |> printfn "%A"
-
-    input1
-    |> Day7.puzzle1
-    |> printfn "puzzle1: %A"
-
-    input1
-    |> Day7.solve1
-    |> printfn "solve1: %A"
-
-    input1
-    |> Day7.solve1_fsp
-    |> printfn "solve1 fsp: %A"
-
-    getPuzzleInput "../inputs/Day7.txt"
-    |> Seq.head
-    |> String.split [","]
-    |> Seq.map int
-    // |> Seq.length
-    |> Day7.puzzle1
-    // |> Seq.sort
-    // |> Seq.toList
-    |> printfn "Finale %A"
+    getPuzzleInput "../inputs/Day8.txt"
+    |> map Day8.parse7sEntry
+    |> Day8.puzzle1
+    |> printfn "%A" // 239
 
     input1
-    |> Day7.calculateLanternFishFuelConsumption 2
-    |> printfn "Test1 Part2 %A" // 206
+    |> Day8.parse7sEntry
+    |> fst
+    |> Seq.map Set
+    |> Day8.solve
+    |> printfn "solve: %A"
 
     input1
-    |> Day7.calculateLanternFishFuelConsumption 5
-    |> printfn "Test2 Part2 %A" // 168
+    |> Day8.parse7sEntry
+    |> (fun (patterns, output) -> Day8.decode (patterns |> Seq.map Set) (output |> Seq.map Set))
+    |> printfn "decode: %A"
 
-    input1
-    |> Day7.puzzle2
-    |> printfn "Test3 Part2 %A"
+    [input1
+    |> Day8.parse7sEntry]
+    |> Day8.puzzle2
+    |> printfn "puzzle2: %A"
 
-    getPuzzleInput "../inputs/Day7.txt"
-    |> Seq.head
-    |> String.split [","]
-    |> Seq.map int
-    |> Seq.toList
-    // input1
-    //|> Day7.calculateLanternFishFuelConsumption 463
-    |> Day7.puzzle2
-    |> printfn "Final2 %A"
+    input2
+    |> map Day8.parse7sEntry
+    |> Day8.puzzle2
+    |> printfn "puzzle2: %A"
 
-    // geometric Mean
-    input1
-    |> List.fold (*) 1
-    |> float
-    |> flip ( ** ) (1.0/(input1 |> List.length |> float))
-    |> printfn "geo Mean: %A"
-
-    getPuzzleInput "../inputs/Day7.txt"
-    |> Seq.head
-    |> String.split [","]
-    |> Seq.map int
-    |> Seq.max
-    |> printfn "max: %A"
-
-    // Mean
-    // getPuzzleInput "../inputs/Day7.txt"
-    // |> Seq.head
-    // |> String.split [","]
-    // |> Seq.map int
-    // |> Seq.toList
-    input1
-    |> Day7.arithmeticMean
-    |> printfn "Arithmetic Mean: %A"
-
-    // Root Mean Square
-    // inputDay7
-    // |> List.map (float >> flip ( ** ) 2)
-    // |> List.sum
-    // |> flip (/) (inputDay7 |> List.length |> float)
-    // |> Math.Sqrt
-    // |> printfn "Mean: %A"
-
-    // let input1 = [3;4;3;1;2]
-
-    // // input1
-    // // |> Day6.puzzle1 2
-    // // |> printfn "%A" // 26
-
-    // input1
-    // |> Day6.puzzle1 18
-    // |> printfn "%A" // 26
-
-    // input1
-    // |> Day6.puzzle1 80
-    // |> printfn "%A" // 5934
-
-    // getPuzzleInput "../inputs/Day6.txt"
-    // |> Seq.head
-    // |> String.split [","]
-    // |> Seq.map int
-    // |> Seq.toList
-    // |> Day6.puzzle1 80
-    // |> printfn "%A" // 390923
-
-    // input1
-    // |> Day6.puzzle1 256
-    // |> printfn "%A" // 
-
-    // getPuzzleInput "../inputs/Day6.txt"
-    // |> Seq.head
-    // |> String.split [","]
-    // |> Seq.map int
-    // |> Seq.toList
-    // |> Day6.puzzle1 256
-    // |> printfn "%A"
+    getPuzzleInput "../inputs/Day8.txt"
+    |> map Day8.parse7sEntry
+    |> Day8.puzzle2
+    |> printfn "puzzle2: %A"
 
     0 // return an integer exit code
