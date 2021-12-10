@@ -52,3 +52,10 @@ let triplewise list =
             x2 :: x3 :: tail
             |> twRec ((x1,x2,x3)::acc)
     twRec [] list
+
+let MapTryGetValue k m =
+    m
+    |> Map.containsKey k
+    |> function
+        | false -> None
+        | true -> Some m.[k]
