@@ -7,24 +7,77 @@ open FSharpPlus
 [<EntryPoint>]
 let main argv =
     let input1 = [
-        [1;1;1;1;1]
-        [1;9;9;9;1]
-        [1;9;1;9;1]
-        [1;9;9;9;1]
-        [1;1;1;1;1]
+        "start-A"
+        "start-b"
+        "A-c"
+        "A-b"
+        "b-d"
+        "A-end"
+        "b-end"
     ]
     let input2 = [
-        [5;4;8;3;1;4;3;2;2;3]
-        [2;7;4;5;8;5;4;7;1;1]
-        [5;2;6;4;5;5;6;1;7;3]
-        [6;1;4;1;3;3;6;1;4;6]
-        [6;3;5;7;3;8;5;4;7;8]
-        [4;1;6;7;5;2;4;6;4;5]
-        [2;1;7;6;8;4;1;7;2;1]
-        [6;8;8;2;8;8;1;1;3;4]
-        [4;8;4;6;8;4;8;5;5;4]
-        [5;2;8;3;7;5;1;5;2;6]
+        "dc-end"
+        "HN-start"
+        "start-kj"
+        "dc-start"
+        "dc-HN"
+        "LN-dc"
+        "HN-end"
+        "kj-sa"
+        "kj-HN"
+        "kj-dc"
     ]
+    let input3 = [
+        "fs-end"
+        "he-DX"
+        "fs-he"
+        "start-DX"
+        "pj-DX"
+        "end-zg"
+        "zg-sl"
+        "zg-pj"
+        "pj-he"
+        "RW-he"
+        "fs-DX"
+        "pj-RW"
+        "zg-RW"
+        "start-pj"
+        "he-WI"
+        "zg-he"
+        "pj-fs"
+        "start-RW"
+    ]
+
+    printfn "input1:"
+    input1
+    |> Day12.strings2Map
+    |> Day12.findPaths
+    |> List.map (printfn "%A")
+    |> ignore
+
+    input1
+    |> Day12.puzzle1
+    |> printfn "input1: %A" // 10
+
+    input2
+    |> Day12.puzzle1
+    |> printfn "input2: %A" // 19
+
+    input3
+    |> Day12.puzzle1
+    |> printfn "input3: %A" // 226
+
+    getPuzzleInput "../inputs/Day12.txt"
+    |> Day12.puzzle1
+    |> printfn "puzzle1: %A" // 3230
+
+    // input2
+    // |> Day12.strings2Map
+    // |> printfn "input2:\n%A"
+
+    // input3
+    // |> Day12.strings2Map
+    // |> printfn "input3:\n%A"
 
     // input1
     // |> Day11.puzzle1 2
@@ -58,23 +111,23 @@ let main argv =
     //     |> List.map (fun v -> (v |> List.map (printf " %A") |> ignore; printfn ""))
     //     |> ignore // 1719
 
-    input2
-    |> Day11.puzzle2
-    |> fun (days, dumbos) ->
-        printfn "days: %A" days
-        dumbos
-        |> List.map (fun v -> (v |> List.map (printf " %A") |> ignore; printfn ""))
-        |> ignore // 195
+    // input2
+    // |> Day11.puzzle2
+    // |> fun (days, dumbos) ->
+    //     printfn "days: %A" days
+    //     dumbos
+    //     |> List.map (fun v -> (v |> List.map (printf " %A") |> ignore; printfn ""))
+    //     |> ignore // 195
 
-    getPuzzleInput "../inputs/Day11.txt"
-    |> Seq.map (fun str -> str |> Seq.map (string >> int) |> Seq.toList)
-    |> Seq.map Seq.toList
-    |> Seq.toList
-    |> Day11.puzzle2
-    |> fun (days, dumbos) ->
-        printfn "days: %A" days
-        dumbos
-        |> List.map (fun v -> (v |> List.map (printf " %A") |> ignore; printfn ""))
-        |> ignore // 232
+    // getPuzzleInput "../inputs/Day11.txt"
+    // |> Seq.map (fun str -> str |> Seq.map (string >> int) |> Seq.toList)
+    // |> Seq.map Seq.toList
+    // |> Seq.toList
+    // |> Day11.puzzle2
+    // |> fun (days, dumbos) ->
+    //     printfn "days: %A" days
+    //     dumbos
+    //     |> List.map (fun v -> (v |> List.map (printf " %A") |> ignore; printfn ""))
+    //     |> ignore // 232
 
     0 // return an integer exit code
