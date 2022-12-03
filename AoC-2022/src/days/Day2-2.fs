@@ -1,6 +1,7 @@
 module AoC2022.Day2_2
 
 open Day2_1
+#nowarn "25"
 
 let rpsFromChar : char -> RPS = function
 | 'A' -> Rock

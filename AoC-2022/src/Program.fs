@@ -4,11 +4,16 @@ open Helpers
 
 [<EntryPoint>]
 let main argv =
-    let input = "A Y\nB X\nC Z"
+    let input = @"vJrwpWtwJgWrhcsFMMfFFhFp
+jqHRNqRjqzjGDLGLrsFMfFZSrLrFZsSL
+PmmdzqPrVvPwwTWBwg
+wMqvLMZHhHMvwLHjbvcjnnSBnvTQFn
+ttgJtRGJQctTZtZT
+CrZsJsPPZsGzwwsLwLmpwMDw".Split "\n"
 
-    input |> Day2_1.parse |> Day2_1.calcTotalScore |> printfn "%A"
-    "../inputs/day2.txt" |> readAllText |> Day2_1.parse |> Day2_1.calcTotalScore |> printfn "%A"
-
-    input |> Day2_2.parse |> Day2_2.calcTotalScore |> printfn "%A"
-    "../inputs/day2.txt" |> readAllText |> Day2_2.parse |> Day2_2.calcTotalScore |> printfn "%A"
+    input |> Day3.puzzle1 |> printfn "%A"
+    "../inputs/day3.txt" |> readAllLines |> Day3.puzzle1 |> printfn "%A"
+    
+    input |> Day3.puzzle2 |> printfn "%A"
+    "../inputs/day3.txt" |> readAllLines |> Day3.puzzle2 |> printfn "%A"
     0

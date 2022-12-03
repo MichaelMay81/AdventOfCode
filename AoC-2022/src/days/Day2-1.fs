@@ -1,5 +1,7 @@
 module AoC2022.Day2_1
 
+#nowarn "25"
+
 type RPS =
 | Rock
 | Paper
