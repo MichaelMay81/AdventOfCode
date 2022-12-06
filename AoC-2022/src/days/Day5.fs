@@ -1,6 +1,7 @@
 module AoC2022.Day5
 
 open FSharpPlus
+#nowarn "25"
 
 type Rap = {
     Count : int
