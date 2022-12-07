@@ -1,59 +1,86 @@
 module AoC2022.Day7
 
 open FParsec
+open AoC2022.Day7_Parsing
 
-type CmdCd =
-| CdIn of string
-| CdOut
-| CdRoot
+type FsState = {
+    Directories : Map<string, int>
+    Cwd : string list
+} with static member Empty = {
+        Directories = Map.empty
+        Cwd = ["/"]}
 
-type Command =
-| Cd of CmdCd
-| Ls
+let toPath (cwd:string seq) =
+    cwd
+    |> Seq.rev
+    |> Seq.skip 1
+    |> String.concat "/"
+    |> (+) "/"
 
-type File = {
-    Name : string
-    Size : int
-}
+let toAllPaths (cwd:string list) =
+    let rec toAllPaths (cwd:string list) (out:string list) =
+        match cwd with
+        | [] ->
+            out
+        | _::tail ->
+            toAllPaths tail ((toPath cwd) :: out)
+    toAllPaths cwd []
 
-type FsInfo =
-| File of File
-| Dir of string
-
-type TerminalOutput =
-| Command of Command
-| FsInfo of FsInfo
-
-let parseFileName = manyChars (letter <|> digit <|> pchar '.')
-
-let parseFile : Parser<File, unit> =
-    pint32 .>> skipChar ' ' .>>. parseFileName
-    |>> (fun (size, name) -> { Name = name; Size = size})
-
-let parseFsInfo : Parser<FsInfo, unit> =
-    choice [
-        skipString "dir " >>. parseFileName |>> Dir
-        parseFile |>> File
-    ]
-
-let parseCmd : Parser<Command, unit> =
-    skipString "$ " >>. choice [
-        stringReturn "ls" Ls
-        stringReturn "cd /" (Cd CdRoot)
-        stringReturn "cd .." (Cd CdOut)
-        skipString "cd " >>. parseFileName |>> (CdIn >> Cd)
-    ]
-
-let parseTerminalOutput =
-    choice [
-        parseCmd |>> Command
-        parseFsInfo |>> FsInfo
-    ] |> sepBy <| pchar '\n'
+let updateFsState (state:FsState) (input:TerminalOutput) : FsState=
+    match input with
+    | Command (Cd (CdIn subPath)) ->
+        { state with Cwd=subPath::state.Cwd }
+    | Command (Cd CdOut) ->
+        { state with Cwd=state.Cwd.Tail }
+    | Command (Cd CdRoot) ->
+        { state with Cwd=["/"]}
+    | FsInfo (File {Name=_; Size=size}) ->
+        let newDirs =
+            state.Cwd
+            |> toAllPaths
+            |> Seq.fold (fun dirs path ->
+                let value =
+                    dirs
+                    |> Map.tryFind path
+                    |> Option.defaultValue 0
+                
+                dirs
+                |> Map.add path (value+size)) state.Directories
+        { state with Directories = newDirs }
+    | _ ->
+        state
 
 let puzzle1 =
     run parseTerminalOutput
     >> function
-    | Success (result, _, _) -> result
+    | Success (result, _, _) ->
+        (result
+        |> Seq.fold updateFsState FsState.Empty)
+            .Directories
+            |> Map.values
+            |> Seq.filter ((>) 100000)
+            |> Seq.sum
+         
     | Failure (msg, _, _) ->
         printfn "%s" msg
-        []
+        -1
+
+let puzzle2 =
+    run parseTerminalOutput
+    >> function
+    | Success (result, _, _) ->
+        let dirs =
+            (result
+            |> Seq.fold updateFsState FsState.Empty)
+                .Directories
+
+        let needed = 30000000 - (70000000 - dirs.["/"])
+        
+        dirs
+        |> Map.values
+        |> Seq.filter ((<) needed)
+        |> Seq.min
+         
+    | Failure (msg, _, _) ->
+        printfn "%s" msg
+        -1
