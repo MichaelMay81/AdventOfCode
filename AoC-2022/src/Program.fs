@@ -5,16 +5,16 @@ open FSharpPlus
 
 [<EntryPoint>]
 let main _ =
-    let input = @"30373
-25512
-65332
-33549
-35390"
+    let input = @"R 4
+U 4
+L 3
+D 1
+R 4
+D 1
+L 5
+R 2"
 
-    input |> Day8_1.puzzle1 |> printfn "%A"
-    "../inputs/day8.txt" |> readAllText |> Day8_1.puzzle1 |> printfn "%A"
-
-    input |> Day8_2.puzzle2 |> printfn "%A"
-    "../inputs/day8.txt" |> readAllText |> Day8_2.puzzle2 |> printfn "%A"
+    input |> Day9_1.puzzle1 |> printfn "%i"
+    "../inputs/day9.txt" |> readAllText |> Day9_1.puzzle1 |> printfn "%i"
 
     0
