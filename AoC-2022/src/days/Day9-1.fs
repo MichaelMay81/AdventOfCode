@@ -54,7 +54,7 @@ let moveTail (rope:Rope) =
     let distX = rope.Head.X - rope.Tail.X
     let distY = rope.Head.Y - rope.Tail.Y
     match Math.Abs distX, Math.Abs distY with
-    | 2, 0 | 0, 2 | 2, 1 | 1, 2 ->
+    | 2, 0 | 0, 2 | 2, 1 | 1, 2 | 2, 2 ->
         { rope with Tail = {
                 X = rope.Tail.X + Math.Sign distX
                 Y = rope.Tail.Y + Math.Sign distY }}
