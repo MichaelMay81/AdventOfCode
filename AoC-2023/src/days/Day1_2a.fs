@@ -1,48 +1,27 @@
-module AoC2023.Day1
-
-let parse (str:string) : string array =
-    str.Split("\n")
-
-let tryCastCharToInt (c:char) : int option =
-    let charCode = int c
-    match charCode < 48 || charCode > 57 with
-    | true -> None
-    | false -> Some (charCode - 48)
-
-let puzzle1 (input : string seq) =
-    input
-    |> Seq.map (
-        Seq.map tryCastCharToInt
-        >> Seq.choose id)
-    |> Seq.map (fun ints ->
-        ints |> Seq.head,
-        ints |> Seq.rev |> Seq.head)
-    |> Seq.map (fun (decade, unit) ->
-        decade * 10 + unit)
-    |> Seq.sum
+module AoC2023.Day1_2a
 
 let rec private tryCastStringToInt (output:int option list) (s:char list) =
     match s with
-    | 'o'::'n'::'e'::tail ->
+    | 'o'::'n'::'e'::_ ->
         tryCastStringToInt ((Some 1)::output) (s |> List.skip 1)
-    | 't'::'w'::'o'::tail ->
+    | 't'::'w'::'o'::_ ->
         tryCastStringToInt ((Some 2)::output) (s |> List.skip 1)
-    | 't'::'h'::'r'::'e'::'e'::tail ->
+    | 't'::'h'::'r'::'e'::'e'::_ ->
         tryCastStringToInt ((Some 3)::output) (s |> List.skip 1)
-    | 'f'::'o'::'u'::'r'::tail ->
+    | 'f'::'o'::'u'::'r'::_ ->
         tryCastStringToInt ((Some 4)::output) (s |> List.skip 1)
-    | 'f'::'i'::'v'::'e'::tail ->
+    | 'f'::'i'::'v'::'e'::_ ->
         tryCastStringToInt ((Some 5)::output) (s |> List.skip 1)
-    | 's'::'i'::'x'::tail ->
+    | 's'::'i'::'x'::_ ->
         tryCastStringToInt ((Some 6)::output) (s |> List.skip 1)
-    | 's'::'e'::'v'::'e'::'n'::tail ->
+    | 's'::'e'::'v'::'e'::'n'::_ ->
         tryCastStringToInt ((Some 7)::output) (s |> List.skip 1)
-    | 'e'::'i'::'g'::'h'::'t'::tail ->
+    | 'e'::'i'::'g'::'h'::'t'::_ ->
         tryCastStringToInt ((Some 8)::output) (s |> List.skip 1)
-    | 'n'::'i'::'n'::'e'::tail ->
+    | 'n'::'i'::'n'::'e'::_ ->
         tryCastStringToInt ((Some 9)::output) (s |> List.skip 1)
-    | c :: tail -> 
-        tryCastStringToInt ((tryCastCharToInt c)::output) tail
+    | c :: tail ->
+        tryCastStringToInt ((Day1_1.tryCastCharToInt c)::output) tail
     | [] ->
         output |> List.rev
 

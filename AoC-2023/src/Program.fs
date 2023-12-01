@@ -1,7 +1,5 @@
 ﻿open AoC2023
-
-// For more information see https://aka.ms/fsharp-console-apps
-printfn "Hello from F#"
+open BenchmarkDotNet.Running
 
 let input1 =
     "1abc2
@@ -20,6 +18,8 @@ zoneight234
 
 // input1 |> Day1.parse |> Day1.puzzle1 |> printfn "%A"
 // "../inputs/Day1.txt" |> Helpers.readAllLines |> Day1.puzzle1 |> printfn "%A"
-// input2 |> Day1.parse |> Day1.puzzle2 |> printfn "%A"
-"../inputs/Day1.txt" |> Helpers.readAllLines |> Day1.puzzle2 |> printfn "%A"
+// input2 |> Day1.parse |> Day1.puzzle2_3 |> printfn "%A"
+//"../inputs/Day1.txt" |> Helpers.readAllLines |> Day1.puzzle2 |> printfn "%A"
 // ["8ninefivegzk7ftqbceightwogfv"] |> Day1.puzzle2 |> printfn "%A"
+
+BenchmarkRunner.Run<Day1_2_bench.Bench>() |> ignore

@@ -7,9 +7,17 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Include="src/days/Day1.fs" />
     <Compile Include="src/Helpers.fs" />
+    <Compile Include="src/days/Day1_1.fs" />
+    <Compile Include="src/days/Day1_2a.fs" />
+    <Compile Include="src/days/Day1_2b.fs" />
+    <Compile Include="src/days/Day1_2c.fs" />
+    <Compile Include="src/days/Day1_2_bench.fs" />
     <Compile Include="src/Program.fs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="BenchmarkDotNet" Version="0.13.10" />
   </ItemGroup>
 
 </Project>
