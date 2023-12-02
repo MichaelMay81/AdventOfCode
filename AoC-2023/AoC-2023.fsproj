@@ -13,11 +13,14 @@
     <Compile Include="src/days/Day1_2b.fs" />
     <Compile Include="src/days/Day1_2c.fs" />
     <Compile Include="src/days/Day1_2_bench.fs" />
+    <Compile Include="src/days/Day2_1.fs" />
+    <Compile Include="src/days/Day2_2.fs" />
     <Compile Include="src/Program.fs" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="BenchmarkDotNet" Version="0.13.10" />
+    <PackageReference Include="fsharpplus" Version="1.5.0" />
   </ItemGroup>
 
 </Project>
