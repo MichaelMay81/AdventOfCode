@@ -6,12 +6,20 @@ type CubeColor =
 | Red
 | Green
 | Blue
-    with static member tryParse =
-            function
-            | "red" -> Some Red
-            | "green" -> Some Green
-            | "blue" -> Some Blue
-            | _ -> None
+    with
+    static member tryParse =
+        function
+        | "red" -> Some Red
+        | "green" -> Some Green
+        | "blue" -> Some Blue
+        | _ -> None
+    static member tryParse2 : string -> option<CubeColor> =
+        Seq.head
+        >> function
+        | 'r' -> Some Red
+        | 'g' -> Some Green
+        | 'b' -> Some Blue
+        | _ -> None
 
 type CubeCount = {
     Count : int
@@ -23,26 +31,26 @@ type Game = {
     Subsets : CubeCount list list
 }
 
-let parseCubeCount (move:string) =
+let parseCubeCount (tryParse:string -> option<CubeColor>) (move:string) =
     move
     |> trySscanf " %i %s"
     |> Option.bind (fun (id, color) ->
-        CubeColor.tryParse color
+        tryParse color
         |> Option.map (fun cubeColor ->
             {   Count = id
                 Color = cubeColor}))
 
-let parseGameInfo (info:string) =
+let parseGameInfo (tryParse:string -> option<CubeColor>) (info:string) =
     info.Split(";")
     |> Seq.map (fun singleGrab ->
         singleGrab.Split(",")
-        |> Seq.map parseCubeCount)
+        |> Seq.map (parseCubeCount tryParse))
 
-let parseLine (line:string) =
+let parseLine (tryParse:string -> option<CubeColor>) (line:string) =
     line
     |> trySscanf "Game %i:%s"
     |> Option.map (fun (gameId, info) ->
-        gameId, parseGameInfo info)
+        gameId, parseGameInfo tryParse info)
     // unpack all Options
     |> Option.defaultValue (-1, [])
     |> (fun (gameId, info) ->
