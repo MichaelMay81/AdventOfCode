@@ -27,7 +27,7 @@ match Environment.GetCommandLineArgs() with
 | [| _; _; year; day; sessionCookie |] ->
     match year |> Int32.TryParse, day |> Int32.TryParse with
     | (true, year), (true, day) ->
-        use writer = new StreamWriter($"AoC-{year}/inputs/Day{day}.txt")
+        use writer = new StreamWriter($"AoC-{year}/inputs/day{day}.txt")
         fetchAocInput year day sessionCookie
         |> writer.Write
 
