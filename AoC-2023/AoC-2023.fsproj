@@ -9,13 +9,15 @@
   <ItemGroup>
     <Compile Include="src/Helpers.fs" />
     <Compile Include="src/days/Day1_1.fs" />
+    <Compile Include="src/days/Day1_1b.fs" />
+    <Compile Include="src/benchmarks/Day1_1.fs" />
     <Compile Include="src/days/Day1_2a.fs" />
     <Compile Include="src/days/Day1_2b.fs" />
     <Compile Include="src/days/Day1_2c.fs" />
-    <Compile Include="src/days/Day1_2_bench.fs" />
+    <Compile Include="src/benchmarks/Day1_2.fs" />
     <Compile Include="src/days/Day2_1.fs" />
     <Compile Include="src/days/Day2_2.fs" />
-    <Compile Include="src/days/Day2_bench.fs" />
+    <Compile Include="src/benchmarks/Day2.fs" />
     <Compile Include="src/days/Day3.fs" />
     <Compile Include="src/Program.fs" />
   </ItemGroup>

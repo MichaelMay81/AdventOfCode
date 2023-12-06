@@ -34,6 +34,13 @@ let final1 = testAsync "Day1 Part1 Final" {
 }
 
 [<Tests>]
+let final1b = testAsync "Day1 Part1b Final" {
+  readAllLines "../inputs/day1.txt"
+  |> Day1_1b.puzzle1
+  |> Expect.equal "" 54632
+}
+
+[<Tests>]
 let test2a = test "Day1 Part2a Test" {
   input2
   |> Day1_1.parse
