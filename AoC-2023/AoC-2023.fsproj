@@ -14,6 +14,7 @@
     <Compile Include="src/days/Day1_2a.fs" />
     <Compile Include="src/days/Day1_2b.fs" />
     <Compile Include="src/days/Day1_2c.fs" />
+    <Compile Include="src/days/Day1_2d.fs" />
     <Compile Include="src/benchmarks/Day1_2.fs" />
     <Compile Include="src/days/Day2_1.fs" />
     <Compile Include="src/days/Day2_2.fs" />

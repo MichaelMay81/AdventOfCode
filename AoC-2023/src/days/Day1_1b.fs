@@ -4,8 +4,8 @@ module AoC2023.Day1_1b
 
 open System
 
-let private firstDigit = Seq.find Char.IsDigit
-let private lastDigit = Seq.rev >> Seq.find Char.IsDigit
+let firstDigit = Seq.find Char.IsDigit
+let lastDigit = Seq.rev >> Seq.find Char.IsDigit
 
 let puzzle1 (input : string seq) =
     input
