@@ -19,7 +19,11 @@
     <Compile Include="src/days/Day2_1.fs" />
     <Compile Include="src/days/Day2_2.fs" />
     <Compile Include="src/benchmarks/Day2.fs" />
-    <Compile Include="src/days/Day3.fs" />
+    <Compile Include="src/days/Day3_1a.fs" />
+    <Compile Include="src/days/Day3_1b.fs" />
+    <Compile Include="src/days/Day3_1c.fs" />
+    <Compile Include="src/days/Day3_1d.fs" />
+    <Compile Include="src/benchmarks/Day3.fs" />
     <Compile Include="src/Program.fs" />
   </ItemGroup>
 

@@ -1,4 +1,4 @@
-module AoC2023.Day3
+module AoC2023.Day3_1a
 
 let private parseNumber (input:char list) =
     let rec func (count:int) (number:int) (input:char list) =
@@ -82,9 +82,12 @@ let rec private collectAll (numbers:int list list) (lines:char list list) (restL
     | _, _ ->
         failwith $"this shouldn't happen {lines} {restLines}"
 
-let puzzle (input: string list) =
-    collectAll [] [] (input |> List.map Seq.toList)
-    |> List.rev
-    |> List.map List.rev
-    |> List.collect id
-    |> List.sum
+let puzzle (input: string seq) =
+    input
+    |> Seq.map Seq.toList
+    |> Seq.toList
+    |> collectAll [] []
+    // |> List.rev
+    // |> List.map List.rev
+    |> Seq.collect id
+    |> Seq.sum
