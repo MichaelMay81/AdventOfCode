@@ -13,7 +13,7 @@ Card 5: 87 83 26 28 32 | 88 30 70 12 93 22 82 36
 Card 6: 31 18 13 56 72 | 74 77 10 23 35 67 36 11"""
 
 [<Tests>]
-let test1a = test "Day4 Part1 Test" {
+let test1 = test "Day4 Part1 Test" {
     input
     |> Day1_1.parse
     |> Day4_1.puzzle
@@ -21,8 +21,23 @@ let test1a = test "Day4 Part1 Test" {
 }
 
 [<Tests>]
-let final1a = testAsync "Day4 Part1 Final" {
+let final1 = testAsync "Day4 Part1 Final" {
     readAllLines "../inputs/day4.txt"
     |> Day4_1.puzzle
     |> Expect.equal "" 20829
+}
+
+[<Tests>]
+let test2 = test "Day4 Part2 Test" {
+    input
+    |> Day1_1.parse
+    |> Day4_2.puzzle
+    |> Expect.equal "" 30
+}
+
+[<Tests>]
+let final2 = testAsync "Day4 Part2 Final" {
+    readAllLines "../inputs/day4.txt"
+    |> Day4_2.puzzle
+    |> Expect.equal "" 12648035
 }
