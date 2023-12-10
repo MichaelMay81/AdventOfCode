@@ -18,3 +18,5 @@ let intersect a b =
 
 let zip4 source1 source2 source3 source4 =
         Seq.map2 (fun a (b, c, d) -> a, b, c, d) source1 (Seq.zip3 source2 source3 source4)
+
+let inline (>=<) a (b,c) = b<=a && a<=c

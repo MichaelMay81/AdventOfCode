@@ -12,6 +12,7 @@
     <Compile Include="src/tests/Test-Day2.fs" />
     <Compile Include="src/tests/Test-Day3.fs" />
     <Compile Include="src/tests/Test-Day4.fs" />
+    <Compile Include="src/tests/Test-Day5.fs" />
     <Compile Include="src/Program.fs" />
   </ItemGroup>
 
