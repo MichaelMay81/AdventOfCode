@@ -35,8 +35,9 @@ humidity-to-location map:
 60 56 37
 56 93 4"""
 
-// input |> Day1_1.parse |>Day5_1.puzzle |> printfn "%A"
-"../inputs/day5.txt" |> Helpers.readAllLines |> Day5_1.puzzle |> printfn "%A"
+// input |> Day1_1.parse |>Day5_2.puzzle |> printfn "%A"
+// "../inputs/day5.txt" |> Helpers.readAllLines |> Day5_2.puzzle |> printfn "%A"
+"../inputs/day5.txt" |> Helpers.readAllLines |> Day5_2b.puzzle |> printfn "%A"
 
 // BenchmarkRunner.Run<Day1_1_bench.Bench>() |> ignore
 // BenchmarkRunner.Run<Day1_2_bench.Bench>() |> ignore

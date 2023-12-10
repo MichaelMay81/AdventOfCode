@@ -46,7 +46,7 @@ let rec private parseMappings (mappings:Mapping list) (input : string list) =
     | _ ->
         mappings, input
 
-let private parse (input : string list) =
+let parse (input : string list) =
     let rec func (almanac:Almanac) (input:string list) =
         match input with
         | [] -> almanac
@@ -88,7 +88,7 @@ let private parse (input : string list) =
                     almanac
     func Almanac.Empty input
 
-let rec private analyse (mappings : Mapping list) (value:int64) =
+let rec analyse (mappings : Mapping list) (value:int64) =
     match mappings with
     | [] -> value
     | head::tail ->
