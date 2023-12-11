@@ -15,35 +15,30 @@ Game 5: 6 red, 1 blue, 3 green; 2 blue, 1 red, 2 green"
 let parseLine = Day2_1.parseLine Day2_1.CubeColor.tryParse
 
 [<Tests>]
-let test1 = test "Day2 Part1 Test" {
-  input
+let tests = testList "Day2" [
+  testCase "Part1 Test" <| fun _  ->
+    input
   |> Day1_1.parse
   |> Seq.map parseLine
   |> Day2_1.puzzle 12 13 14
   |> Expect.equal "" 8
-}
 
-[<Tests>]
-let final1 = testAsync "Day2 Part1 Final" {
-  readAllLines "../inputs/day2.txt"
-  |> Seq.map parseLine
-  |> Day2_1.puzzle 12 13 14
-  |> Expect.equal "" 2449
-}
+  testCase "Part1 Final" <| fun _ ->
+    readAllLines "../inputs/day2.txt"
+    |> Seq.map parseLine
+    |> Day2_1.puzzle 12 13 14
+    |> Expect.equal "" 2449
 
-[<Tests>]
-let test2a = test "Day2 Part2 Test" {
-  input
-  |> Day1_1.parse
-  |> Seq.map parseLine
-  |> Day2_2.puzzle
-  |> Expect.equal "" 2286
-}
+  testCase "Part2 Test" <| fun _  ->
+    input
+    |> Day1_1.parse
+    |> Seq.map parseLine
+    |> Day2_2.puzzle
+    |> Expect.equal "" 2286
 
-[<Tests>]
-let final2a = testAsync "Day2 Part2 Final" {
-  readAllLines "../inputs/day2.txt"
-  |> Seq.map parseLine
-  |> Day2_2.puzzle
-  |> Expect.equal "" 63981
-}
+  testCase "Part2 Final" <| fun _ ->
+    readAllLines "../inputs/day2.txt"
+    |> Seq.map parseLine
+    |> Day2_2.puzzle
+    |> Expect.equal "" 63981
+]

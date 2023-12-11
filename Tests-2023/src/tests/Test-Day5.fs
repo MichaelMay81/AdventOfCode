@@ -40,31 +40,26 @@ humidity-to-location map:
 56 93 4"""
 
 [<Tests>]
-let test1 = test "Day5 Part1 Test" {
-    input
-    |> Day1_1.parse
-    |> Day5_1.puzzle
-    |> Expect.equal "" 35L
-}
-
-[<Tests>]
-let final1 = testAsync "Day5 Part1 Final" {
-    readAllLines "../inputs/day5.txt"
-    |> Day5_1.puzzle
-    |> Expect.equal "" 173706076L
-}
-
-[<Tests>]
-let test1b = test "Day5 Part1b Test" {
-    input
-    |> Day1_1.parse
-    |> Day5_1b.puzzle
-    |> Expect.equal "" 35L
-}
-
-// [<Tests>]
-// let final1b = testAsync "Day5 Part1b Final" {
-//     readAllLines "../inputs/day5.txt"
-//     |> Day5_1b.puzzle
-//     |> Expect.equal "" 173706076L
-// }
+let tests = testList "Day5" [
+    testCase "Part1 Test" <| fun _  ->
+        input
+        |> Day1_1.parse
+        |> Day5_1.puzzle
+        |> Expect.equal "" 35L
+    
+    testCase "Part1 Final" <| fun _ ->
+        readAllLines "../inputs/day5.txt"
+        |> Day5_1.puzzle
+        |> Expect.equal "" 173706076L
+    
+    testCase "Part1b Test" <| fun _  ->
+        input
+        |> Day1_1.parse
+        |> Day5_1b.puzzle
+        |> Expect.equal "" 35L
+    
+    // testCase "Part1b Final" <| fun _ ->
+    //     readAllLines "../inputs/day5.txt"
+    //     |> Day5_1b.puzzle
+    //     |> Expect.equal "" 173706076L
+]
