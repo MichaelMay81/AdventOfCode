@@ -10,7 +10,7 @@ type SeedRange = {
 let private seedRangeToSeeds (seedRange:SeedRange) =
     seq { seedRange.Start .. (seedRange.Start+seedRange.Length-1L) }
 
-let rec private generateSeedRanges (output:SeedRange seq) (input:int64 list) =
+let rec generateSeedRanges (output:SeedRange seq) (input:int64 list) =
     match input with
     | start::length::tail ->
         let newSeedRange = { Start=start; Length=length }
