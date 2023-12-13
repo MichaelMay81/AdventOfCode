@@ -1,11 +1,14 @@
 ﻿open AoC2023
 open BenchmarkDotNet.Running
 
-let input = """Time:      7  15   30
-Distance:  9  40  200"""
+let input = """32T3K 765
+T55J5 684
+KK677 28
+KTJJT 220
+QQQJA 483"""
 
-// input |> Day1_1.parse |> Day6_2.puzzle |> printfn "%A"
-"../inputs/day6.txt" |> Helpers.readAllLines |> Day6_2.puzzle |> printfn "%A"
+// input |> Day1_1.parse |> Day7_1.puzzle |> printfn "%A"
+"../inputs/day7.txt" |> Helpers.readAllLines |> Day7_1.puzzle |> printfn "%A"
 
 // BenchmarkRunner.Run<Day1_1_bench.Bench>() |> ignore
 // BenchmarkRunner.Run<Day1_2_bench.Bench>() |> ignore
