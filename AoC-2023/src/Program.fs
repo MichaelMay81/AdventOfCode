@@ -7,7 +7,7 @@ KK677 28
 KTJJT 220
 QQQJA 483"""
 
-// input |> Day1_1.parse |> Day7_1.puzzle |> printfn "%A"
+// input |> Day1_1.parse |> Day7_2.puzzle |> printfn "%A"
 "../inputs/day7.txt" |> Helpers.readAllLines |> Day7_1.puzzle |> printfn "%A"
 
 // BenchmarkRunner.Run<Day1_1_bench.Bench>() |> ignore

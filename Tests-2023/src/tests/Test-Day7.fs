@@ -23,4 +23,15 @@ let tests = testList "Day7" [
         readAllLines "../inputs/day7.txt"
         |> Day7_1.puzzle
         |> Expect.equal "" 248453531
+
+    testCase "Part2 Test" <| fun _  ->
+        input
+        |> Day1_1.parse
+        |> Day7_2.puzzle
+        |> Expect.equal "" 5905
+
+    testCase "Part2 Final" <| fun _ ->
+        readAllLines "../inputs/day7.txt"
+        |> Day7_2.puzzle
+        |> Expect.equal "" 248781813
 ]
