@@ -12,7 +12,7 @@ type Map = {
     Network : Map<string, Node>
 }
 
-let parseNode : string -> string*Node =
+let private parseNode : string -> string*Node =
     sscanf "%s = (%s, %s)"
     >> fun (id, left, right) ->
         id, { Left=left; Right=right}
@@ -25,7 +25,7 @@ let parse (input : string seq) =
             |> Seq.map parseNode
             |> Map }
 
-let analyze (map:Map) =
+let private analyze (map:Map) =
     let rec func (steps:int) (instructions:char list) (currentNodeKey:string) =
         match currentNodeKey, instructions with
         | "ZZZ", _ ->
