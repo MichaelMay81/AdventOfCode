@@ -10,7 +10,7 @@ let input = """0 3 6 9 12 15
 10 13 16 21 30 45"""
 [<Tests>]
 let tests = testList "Day9" [
-    testCase "Part1 Test1" <| fun _  ->
+    testCase "Part1 Test" <| fun _  ->
         input
         |> Day1_1.parse
         |> Day9_1.puzzle
@@ -20,4 +20,15 @@ let tests = testList "Day9" [
         readAllLines "../inputs/day9.txt"
         |> Day9_1.puzzle
         |> Expect.equal "" 1916822650
+
+    testCase "Part2 Test" <| fun _  ->
+        input
+        |> Day1_1.parse
+        |> Day9_2.puzzle
+        |> Expect.equal "" 2
+
+    testCase "Part2 Final" <| fun _ ->
+        readAllLines "../inputs/day9.txt"
+        |> Day9_2.puzzle
+        |> Expect.equal "" 966
 ]

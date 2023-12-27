@@ -41,6 +41,7 @@
     <Compile Include="src/days/day8/Part2.fs" />
     <Compile Include="src/benchmarks/Day8.fs" />
     <Compile Include="src/days/day9/Part1.fs" />
+    <Compile Include="src/days/day9/Part2.fs" />
     <Compile Include="src/Program.fs" />
   </ItemGroup>
 
