@@ -21,6 +21,6 @@ object Day1_2 {
         val inputs = inputString
             .map(::translate)
 
-        runTest("Day1_1 complex", { puzzle(50, inputs) }, suspectedResult)
+        runTest("Day1_2 complex", { puzzle(50, inputs) }, suspectedResult)
     }
 }
