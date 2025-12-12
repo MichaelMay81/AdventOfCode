@@ -1,5 +1,4 @@
 ﻿import kotlin.time.Duration.Companion.nanoseconds
-import kotlin.time.Duration.Companion.seconds
 
 object Helpers {
     fun <T>runTest(testName:String, testSubject:() -> T, suspectedResult:T) {
@@ -15,5 +14,17 @@ object Helpers {
         }
 
         println(" Result: $result, Duration: $duration")
+    }
+
+    fun <T>pair(lists:List<List<T>>) : List<List<T>> {
+        if (lists.isEmpty()) return emptyList()
+
+        val length = lists.first().size
+        if (lists.any{ list -> list.size != length })
+            return emptyList()
+
+        return (0..<length)
+            .map { i1 -> (0..<lists.size)
+                .map { i2 -> lists[i2][i1] }}
     }
 }

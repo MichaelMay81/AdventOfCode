@@ -12,7 +12,7 @@ object Day3_2 {
         val tail = input.drop(1)
 
         if (result.isEmpty())
-            return process(tail, listOf(head), size);
+            return process(tail, listOf(head), size)
 
         val start = max(size - input.size, 0)
         val i = result.drop(start).indexOfFirst { value -> value < head }

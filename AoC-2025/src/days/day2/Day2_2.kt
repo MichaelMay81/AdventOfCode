@@ -1,20 +1,9 @@
 ﻿package days.day2
 
+import Helpers.pair
 import days.day2.Day2_1.idToStrings
 
 object Day2_2 {
-
-    fun <T>pair(lists:List<List<T>>) : List<List<T>> {
-        if (lists.isEmpty()) return emptyList()
-
-        val length = lists.first().size
-        if (lists.any{ list -> list.size != length })
-            return emptyList()
-
-        return (0..<length)
-            .map { i1 -> (0..<lists.size)
-                .map { i2 -> lists[i2][i1] }}
-    }
 
     fun invalid(input:String, splitInto:Int) : Boolean {
         if (input.length % splitInto == 0) {

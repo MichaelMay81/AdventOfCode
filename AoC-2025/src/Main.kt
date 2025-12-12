@@ -4,8 +4,11 @@ import tests.day2.Day2_1
 import tests.day2.Day2_2
 import tests.day3.Day3_1
 import tests.day3.Day3_2
+import tests.day4.Day4_1
+import kotlin.time.Duration.Companion.nanoseconds
 
 fun runSimpleTests() {
+    val startTime = System.nanoTime()
     Day1_1.testSimple()
     Day1_2.testSimple()
     Day2_1.testSimple()
@@ -13,8 +16,12 @@ fun runSimpleTests() {
     Day3_1.testSimple()
     Day3_2.testSimple1()
     Day3_2.testSimple2()
+    Day4_1.testSimple()
+    val duration = (System.nanoTime() - startTime).nanoseconds
+    println("Total duration: $duration")
 }
 fun runComplexTests() {
+    val startTime = System.nanoTime()
     Day1_1.testComplex()
     Day1_2.testComplex()
     Day2_1.testComplex()
@@ -22,9 +29,13 @@ fun runComplexTests() {
     Day3_1.testComplex()
     Day3_2.testComplex1()
     Day3_2.testComplex2()
+    Day4_1.testComplex()
+    val duration = (System.nanoTime() - startTime).nanoseconds
+    println("Total duration: $duration")
 }
 
 fun main() {
     runSimpleTests()
+    println()
     runComplexTests()
 }
