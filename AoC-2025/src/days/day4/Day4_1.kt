@@ -1,6 +1,6 @@
 ﻿package days.day4
 
-import Helpers.pair
+import Helpers.transposed
 
 object Day4_1 {
 
@@ -69,8 +69,10 @@ object Day4_1 {
         val inputInt = input.map { l -> l.map { b -> if (b) 1 else 0 }}
 
         val paperNeighbours =
-            pair(listOf(inputInt, neighbours))
-                .map { lists -> pair(lists)
+            listOf(inputInt, neighbours)
+                .transposed()
+                .map { lists -> lists
+                    .transposed()
                     .map { ints -> ints
                         .reduce { a, b -> a * b + a } } }
 

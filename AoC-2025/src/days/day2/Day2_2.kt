@@ -1,6 +1,6 @@
 ﻿package days.day2
 
-import Helpers.pair
+import Helpers.transposed
 import days.day2.Day2_1.idToStrings
 
 object Day2_2 {
@@ -9,7 +9,7 @@ object Day2_2 {
         if (input.length % splitInto == 0) {
             val chunkSize = input.length / splitInto
             val chunks = input.chunked(chunkSize).map{ s -> s.toList() }
-            val pairs = pair(chunks)
+            val pairs = chunks.transposed()
             if (pairs.all { pair -> pair.distinct().size == 1 })
                 return true
         }
