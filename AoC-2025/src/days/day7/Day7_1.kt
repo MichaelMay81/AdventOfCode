@@ -1,8 +1,5 @@
 ﻿package days.day7
 
-import Helpers.pair
-import Helpers.transposed
-
 object Day7_1 {
 
     fun parse(input:String) : List<String> {
@@ -10,7 +7,7 @@ object Day7_1 {
             val lines =
                 input
                 .replace("\r", "")
-                .split('\n');
+                .split('\n')
 
             return lines
         } catch (e: Exception) {
