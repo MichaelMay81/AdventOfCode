@@ -24,6 +24,6 @@ object Day6_1 {
 
         val inputs = parse(inputString)
 
-        runTest("Day6_1 complex1", { puzzle(inputs) }, suspectedResult)
+        runTest("Day6_1 complex", { puzzle(inputs) }, suspectedResult)
     }
 }
