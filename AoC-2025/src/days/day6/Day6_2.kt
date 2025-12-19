@@ -27,7 +27,8 @@ object Day6_2 {
             val lines =
                 input
                 .replace("\r", "")
-                .split('\n');
+                .split('\n')
+                .filter { it != "" }
 
             val linesTransposed = lines
                 .map { line -> line

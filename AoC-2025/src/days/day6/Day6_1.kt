@@ -10,7 +10,8 @@ object Day6_1 {
             val lines =
                 input
                 .replace("\r", "")
-                .split('\n');
+                .split('\n')
+                .filter { it.isNotEmpty() }
 
             val numbers = lines
                 .take(lines.size - 1)

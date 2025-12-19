@@ -10,7 +10,7 @@ object Day8_2 {
     fun testSimple() {
         val suspectedResult = 25272
 
-        runTest("Day8_1 simple", { puzzle(input) }, suspectedResult)
+        runTest("Day8_2 simple", { puzzle(input) }, suspectedResult)
     }
 
     fun testComplex() {
@@ -19,6 +19,6 @@ object Day8_2 {
 
         val inputs = parse(inputString)
 
-        runTest("Day8_1 complex", { puzzle(inputs) }, suspectedResult)
+        runTest("Day8_2 complex", { puzzle(inputs) }, suspectedResult)
     }
 }
