@@ -1,5 +1,6 @@
 ﻿package days.day8
 
+import Helpers.permutations
 import kotlin.math.sqrt
 
 object Day8_1 {
@@ -19,21 +20,6 @@ object Day8_1 {
     fun Point.distanceTo(point:Point) : Double {
         val distanceSquared = this.distanceSquaredTo(point)
         return sqrt(distanceSquared.toDouble())
-    }
-
-    fun <T>List<T>.permutations() : List<Pair<T, T>> {
-        tailrec fun permutate(list:List<T>, result:List<Pair<T,T>>):List<Pair<T,T>> {
-            if (list.isEmpty())
-                return result
-
-            val head = list.first()
-            val tail = list.drop(1)
-            val newPermutations = tail.map { Pair(head, it) }
-
-            return permutate(tail, result + newPermutations)
-        }
-
-        return permutate(this, emptyList())
     }
 
     fun parse(input:String) : List<Point> {

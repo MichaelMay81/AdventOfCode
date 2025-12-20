@@ -35,4 +35,19 @@ object Helpers {
         return (0..<length)
             .map { i -> Pair(list1[i], list2[i]) }
     }
+
+    fun <T>List<T>.permutations() : List<Pair<T, T>> {
+        tailrec fun permutate(list:List<T>, result:List<Pair<T,T>>):List<Pair<T,T>> {
+            if (list.isEmpty())
+                return result
+
+            val head = list.first()
+            val tail = list.drop(1)
+            val newPermutations = tail.map { Pair(head, it) }
+
+            return permutate(tail, result + newPermutations)
+        }
+
+        return permutate(this, emptyList())
+    }
 }

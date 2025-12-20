@@ -4,7 +4,7 @@ import days.day8.Day8_1.Point
 import days.day8.Day8_1.PointsWithDistance
 import days.day8.Day8_1.combinePoints
 import days.day8.Day8_1.distanceTo
-import days.day8.Day8_1.permutations
+import Helpers.permutations
 
 object Day8_2 {
 
